@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+
+.mkdf-banner-holder {
+    @include mkdfRelativeHolderLayout();
+	overflow: hidden;
+	
+	.touchevents & {
+		cursor: pointer;
+	}
+	
+	&:hover {
+		.mkdf-banner-image {
+			transform: scale(1.05) translateX(5px);
+		}
+	}
+	
+	&.mkdf-visible-on-hover {
+		
+		&:hover {
+			
+			.mkdf-banner-text-holder {
+				opacity: 1;
+			}
+		}
+		
+		.mkdf-banner-text-holder {
+			opacity: 0;
+			transition: opacity .2s ease-out;
+		}
+	}
+	
+	&.mkdf-disabled {
+		
+		.mkdf-banner-text-holder {
+			display: none;
+		}
+	}
+	
+	&.mkdf-banner-info-centered {
+		
+		.mkdf-banner-text-holder {
+			
+			.mkdf-banner-text-inner {
+				align-items: center;
+			}
+		}
+	}
+	
+	&.mkdf-banner-info-right {
+		
+		.mkdf-banner-text-holder {
+			
+			.mkdf-banner-text-inner {
+				justify-content: flex-end;
+				align-items: flex-end;
+			}
+		}
+	}
+	
+	&.mkdf-banner-info-top {
+		
+		.mkdf-banner-text-holder {
+			
+			.mkdf-banner-text-inner {
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+		}
+	}
+	
+	.mkdf-banner-image {
+		@include mkdfRelativeHolderLayout();
+		transform: scale(1.05) translateX(-5px);
+		transition: .5s ease-out;
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.mkdf-banner-bg-color {
+		@include mkdfRelativeHolderLayout();
+		background-color: rgba($default-heading-color, .4);
+		height: 200px;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-banner-text-holder {
+		@include mkdfAbsoluteHolderLayout();
+		border: 1px solid #d7d7d7;
+		width: calc(100% - 26px);
+		height: calc(100% - 26px);
+		padding: 22px 24px;
+		top: 13px;
+		left: 13px;
+		box-sizing: border-box;
+		z-index: 1;
+		
+		@include ipad-portrait {
+			padding: 20px;
+		}
+	}
+	
+	.mkdf-banner-text-outer {
+		position: relative;
+		display: flex;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.mkdf-banner-text-inner {
+		position: relative;
+		display: flex;
+		height: 100%;
+		width: 100%;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		vertical-align: bottom;
+	}
+	
+	.mkdf-banner-subtitle {
+		margin: 1px 0 0;
+		color: $default-text-color;
+		font-style: italic;
+		font-size: 19px;
+	}
+	
+	span.mkdf-banner-subtitle {
+		font-family: $custom-font;
+		font-size: 40px;
+		color: #c4c4c4;
+	}
+	
+	p.mkdf-banner-custom-title {
+		font-family: $custom-font;
+		font-size: 40px;
+		color: #c4c4c4;
+		margin: 0;
+	}
+	
+	.mkdf-banner-title {
+		color: $default-heading-color;
+		font-size: 23px;
+		letter-spacing: 0.07em;
+		margin: 0;
+		
+		.mkdf-banner-title-light {
+			font-weight: 300;
+		}
+	}
+
+	.mkdf-banner-link {
+		@include mkdfAbsoluteHolderLayout();
+		z-index: 1;
+	}
+
+	&.mkdf-banner-predefined1-layout {
+
+		.mkdf-banner-text-holder {
+			padding: 47px 0 0 24px;
+
+			@include laptop-landscape-large {
+				padding: 44px 0 0 24px;
+			}
+
+			@include laptop-landscape-mac {
+				padding: 31px 0 0 24px;
+			}
+
+			@include ipad-landscape {
+				padding: 115px 0 0 24px;
+			}
+
+			@include ipad-portrait {
+				padding: 82px 0 0 24px;
+			}
+
+			@include phone-portrait {
+				padding: 23px 0 0 24px;
+			}
+		}
+	}
+
+	&.mkdf-banner-predefined2-layout {
+
+		.mkdf-banner-text-holder {
+			padding: 73px 0 0 37px;
+
+			@include phone-portrait {
+				padding: 48px 0 0 21px;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

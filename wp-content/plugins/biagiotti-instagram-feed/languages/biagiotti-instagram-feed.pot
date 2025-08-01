@@ -1,0 +1,314 @@
+# Copyright (C) 2023 Mikado Themes
+# This file is distributed under the same license as the Biagiotti Instagram Feed plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Biagiotti Instagram Feed 2.2.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/biagiotti-instagram-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-06-30T11:17:39+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: biagiotti-instagram-feed\n"
+
+#. Plugin Name of the plugin
+msgid "Biagiotti Instagram Feed"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds Instagram feed functionality to our theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Mikado Themes"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:10
+#: shortcodes/instagram-list/instagram-list.php:29
+msgid "Instagram List"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:25
+msgid "General"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:33
+#: shortcodes/instagram-list/instagram-list.php:38
+#: widgets/biagiotti-instagram-widget.php:32
+msgid "Type"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:36
+#: shortcodes/instagram-list/instagram-list.php:40
+#: widgets/biagiotti-instagram-widget.php:34
+msgid "Gallery"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:37
+#: shortcodes/instagram-list/instagram-list.php:41
+#: widgets/biagiotti-instagram-widget.php:35
+msgid "Carousel"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:46
+#: shortcodes/instagram-list/instagram-list.php:47
+#: widgets/biagiotti-instagram-widget.php:41
+msgid "Number of Columns"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:49
+#: shortcodes/instagram-list/instagram-list.php:49
+#: widgets/biagiotti-instagram-widget.php:43
+msgid "One"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:50
+#: shortcodes/instagram-list/instagram-list.php:50
+#: widgets/biagiotti-instagram-widget.php:44
+msgid "Two"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:51
+#: shortcodes/instagram-list/instagram-list.php:51
+#: widgets/biagiotti-instagram-widget.php:45
+msgid "Three"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:52
+#: shortcodes/instagram-list/instagram-list.php:52
+#: widgets/biagiotti-instagram-widget.php:46
+msgid "Four"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:53
+#: shortcodes/instagram-list/instagram-list.php:53
+#: widgets/biagiotti-instagram-widget.php:47
+msgid "Five"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:54
+#: shortcodes/instagram-list/instagram-list.php:54
+#: widgets/biagiotti-instagram-widget.php:48
+msgid "Six"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:55
+#: shortcodes/instagram-list/instagram-list.php:55
+#: widgets/biagiotti-instagram-widget.php:49
+msgid "Nine"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:57
+msgid "Default value is Three"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:65
+#: shortcodes/instagram-list/instagram-list.php:62
+#: widgets/biagiotti-instagram-widget.php:60
+msgid "Space Between Items"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:68
+#: shortcodes/instagram-list/instagram-list.php:64
+#: widgets/biagiotti-instagram-widget.php:62
+msgid "Medium (20)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:69
+#: shortcodes/instagram-list/instagram-list.php:65
+#: widgets/biagiotti-instagram-widget.php:63
+msgid "Normal (15)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:70
+#: shortcodes/instagram-list/instagram-list.php:66
+#: widgets/biagiotti-instagram-widget.php:64
+msgid "Small (10)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:71
+#: shortcodes/instagram-list/instagram-list.php:67
+#: widgets/biagiotti-instagram-widget.php:65
+msgid "Tiny (5)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:72
+#: shortcodes/instagram-list/instagram-list.php:68
+#: widgets/biagiotti-instagram-widget.php:66
+msgid "Micro (3)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:73
+#: shortcodes/instagram-list/instagram-list.php:69
+#: widgets/biagiotti-instagram-widget.php:67
+msgid "No (0)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:82
+#: shortcodes/instagram-list/instagram-list.php:76
+#: widgets/biagiotti-instagram-widget.php:55
+msgid "Number of Photos"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:91
+#: shortcodes/instagram-list/instagram-list.php:81
+#: widgets/biagiotti-instagram-widget.php:100
+msgid "Images Cache Time"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:100
+#: shortcodes/instagram-list/instagram-list.php:89
+#: widgets/biagiotti-instagram-widget.php:73
+msgid "Show Instagram Icon"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:110
+msgid "Image Size"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:113
+msgid "Small"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:114
+msgid "Medium"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:115
+msgid "Large"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:124
+#: shortcodes/instagram-list/instagram-list.php:95
+#: widgets/biagiotti-instagram-widget.php:79
+msgid "Show Instagram Info"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:134
+#: shortcodes/instagram-list/instagram-list.php:101
+#: widgets/biagiotti-instagram-widget.php:85
+msgid "Tagline"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:145
+#: shortcodes/instagram-list/instagram-list.php:107
+#: widgets/biagiotti-instagram-widget.php:27
+#: widgets/biagiotti-instagram-widget.php:90
+msgid "Title"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:156
+#: shortcodes/instagram-list/instagram-list.php:113
+#: widgets/biagiotti-instagram-widget.php:95
+msgid "Subtitle"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:169
+#: shortcodes/instagram-list/instagram-list.php:123
+#: shortcodes/instagram-list/instagram-list.php:131
+#: shortcodes/instagram-list/instagram-list.php:138
+#: shortcodes/instagram-list/instagram-list.php:145
+#: shortcodes/instagram-list/instagram-list.php:153
+#: shortcodes/instagram-list/instagram-list.php:164
+#: shortcodes/instagram-list/instagram-list.php:175
+#: shortcodes/instagram-list/instagram-list.php:183
+#: shortcodes/instagram-list/instagram-list.php:194
+msgid "Slider Settings"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:177
+#: shortcodes/instagram-list/instagram-list.php:120
+msgid "Enable Slider Loop"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:187
+#: shortcodes/instagram-list/instagram-list.php:128
+msgid "Enable Slider Autoplay"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:197
+#: shortcodes/instagram-list/instagram-list.php:136
+msgid "Slide Duration"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:199
+#: shortcodes/instagram-list/instagram-list.php:137
+msgid "Default value is 5000 (ms)"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:207
+#: shortcodes/instagram-list/instagram-list.php:143
+msgid "Slide Animation Duration"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:209
+#: shortcodes/instagram-list/instagram-list.php:144
+msgid "Speed of slide animation in milliseconds. Default value is 600."
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:217
+#: shortcodes/instagram-list/instagram-list.php:150
+msgid "Enable Slider Navigation Arrows"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:227
+#: shortcodes/instagram-list/elementor-instagram-list.php:243
+msgid "Navigation Skin"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:230
+#: shortcodes/instagram-list/elementor-instagram-list.php:246
+#: shortcodes/instagram-list/elementor-instagram-list.php:272
+#: shortcodes/instagram-list/instagram-list.php:160
+#: shortcodes/instagram-list/instagram-list.php:171
+#: shortcodes/instagram-list/instagram-list.php:190
+msgid "Default"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:231
+#: shortcodes/instagram-list/elementor-instagram-list.php:273
+#: shortcodes/instagram-list/instagram-list.php:161
+#: shortcodes/instagram-list/instagram-list.php:191
+msgid "Light"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:247
+#: shortcodes/instagram-list/instagram-list.php:172
+msgid "Outside of Content"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:259
+#: shortcodes/instagram-list/instagram-list.php:180
+msgid "Enable Slider Pagination"
+msgstr ""
+
+#: shortcodes/instagram-list/elementor-instagram-list.php:269
+msgid "Pagination Skin"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:31
+msgid "by BIAGIOTTI"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:158
+msgid "Slider Navigation Skin"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:169
+msgid "Slider Navigation Arrows Position"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:188
+msgid "Slider Pagination Skin"
+msgstr ""
+
+#: widgets/biagiotti-instagram-widget.php:13
+msgid "Biagiotti Instagram Widget"
+msgstr ""
+
+#: widgets/biagiotti-instagram-widget.php:15
+msgid "Display your Instagram feed"
+msgstr ""

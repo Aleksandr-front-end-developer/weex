@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Social Icon widget style - begin
+   ========================================================================== */
+.mkdf-social-icon-widget-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 17px;
+  color: #838383;
+}
+
+.mkdf-social-icon-widget-holder:hover {
+  color: #4f4e4e;
+}
+
+.mkdf-page-footer .mkdf-social-icon-widget-holder:hover,
+.mkdf-side-menu .mkdf-social-icon-widget-holder:hover {
+  color: #fff;
+}
+
+.mkdf-social-icon-widget-holder.mkdf-square-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 0 3px;
+  line-height: 1;
+  color: #000;
+  border: 1px solid #d7d7d7;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.mkdf-social-icon-widget-holder.mkdf-square-icon:hover {
+  border-color: #4f4e4e;
+}
+
+.mkdf-social-icon-widget-holder.mkdf-square-icon .mkdf-social-icon-widget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.mkdf-social-icon-widget-holder.mkdf-square-icon.mkdf-light-skin {
+  color: #d7d7d7;
+  border-color: #5f5f5f;
+}
+
+.mkdf-social-icon-widget-holder.mkdf-square-icon.mkdf-light-skin:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #000 !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: #000 !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: #4f4e4e !important;
+}
+
+/* ==========================================================================
+   Social Icon widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=social-icon-widget-map.css.map */

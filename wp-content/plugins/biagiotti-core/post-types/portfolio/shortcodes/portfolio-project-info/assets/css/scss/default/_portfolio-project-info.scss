@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Portfolio Project Info shortcode style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-project-info {
+    position: relative;
+	display: block;
+
+	&:not(.mkdf-project-info-image) {
+
+		.mkdf-ppi-label {
+			display: inline-block;
+			margin: 0 5px 0 0;
+		}
+	}
+
+	&.mkdf-project-info-title {
+
+		.mkdf-ppi-title {
+			vertical-align: baseline;
+		}
+	}
+
+	.mkdf-ppi-label {
+		display: inline-block;
+		margin: 0;
+	}
+
+	> span,
+	> a,
+	> div > a {
+		@include mkdfHeadingStyle(h6);
+		display: inline-block;
+		margin: 0 4px 0 0;
+		color: #5c5c5c;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	a:hover {
+		color: $first-main-color;
+	}
+
+	.mkdf-ppi-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+
+	.mkdf-ppi-image {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		overflow: hidden;
+
+		img {
+			display: block;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Project Info shortcode style - end
+   ========================================================================== */

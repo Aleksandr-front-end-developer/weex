@@ -1,0 +1,190 @@
+3.4
+- Updated Revolution Slider to 6.7.23
+- Updated WPBakery Page Builder to 8.0.1
+- Updated Biagiotti Membership plugin to 1.1
+- Improved Facebook social login functionality
+- Improved WooCommerce compatibility
+
+3.3.1
+- Updated Revolution Slider to 6.7.20
+- Updated Biagiotti Core to 2.1.3
+- Improved PHP 8.3 compatibility
+
+3.3
+- Updated WPBakery Page Builder to 7.9
+- Updated Revolution Slider to 6.7.19
+- Improved framework security
+
+3.2
+- Added QODE Quick View for WooCommerce compatibility
+- Updated WPBakery Page Builder to 7.6
+- Updated Revolution Slider to 6.7.11
+- Improved QODE Wishlist for WooCommerce styles for Product List shortcode
+- Improved TGMPA functionality
+
+3.1.2
+- Updated Revolution Slider to 6.7.1
+- Updated Biagiotti Core to 2.1.2
+- Improved WPML compatibility - Theme is now fully compatible with Advanced Translation Editor and all WPML features
+- Improved Google Maps inline call with loading=async
+
+3.1.1
+- Improved QODE Wishlist for WooCommerce styles for Product Carousel
+
+3.1
+- Added QODE Wishlist for WooCommerce compatibility
+- Updated Biagiotti Core to 2.1.1
+- Updated WPBakery Page Builder to 7.5
+- Updated Revolution Slider to 6.6.20
+- Updated pot files
+- Fixed WPML Footer language switcher not working
+- Fixed WPML Translation Management not translating Elementor Widgets
+- Fixed WPML Translation Management not translating WPBakery Shortcodes
+- Fixed Vimeo video not showing when using Elementor Video widget
+
+3.0
+- Added WordPress 6.2.2 compatibility
+- Added WooCommerce 7.8.0 compatibility
+- Updated WPBakery Page Builder plugin to 6.13.0
+- Updated Revolution Slider to 6.6.14
+
+2.9.1
+- Fixed google font import issue
+
+2.9
+- Added WordPress 6.1.1 compatibility
+- Added WooCommerce 7.4.0 compatibility
+- Updated Revolution Slider plugin to 6.6.11
+- Updated WPBakery Page Builder to 6.10.0
+- Updated Biagiotti Core plugin to 2.1
+- Improved themes security
+- Disabled Google Fonts loading if global option (Enable Google Fonts) is set to No
+- Improved Google Maps API with callback function
+- Fixed minor bugs
+
+2.8
+- Added WordPress 6.0 compatibility
+- Added WooCommerce 6.6.1 compatibility
+- Updated Biagiotti Core plugin to 2.0.5
+- Updated Biagiotti Membership plugin to 1.0.2
+- Updated WPBakery Page Builder to 6.9.0
+- Updated Revolution Slider plugin to 6.5.25
+- Fixed parallax background on row
+- Fixed _register_controls Deprecated notice
+- Fixed Social share on blog posts
+- Fixed fullscreen menu layout
+- Fixed Simple Line Icons version
+- Fixed Product Single Star Rating layout
+- Fixed Countdown Shortcode
+- Fixed Child theme enqueuing styles
+- Improved YITH Wishlist and QuickView for latest WooCommerce
+- Improved theme registration - code already used case
+- Improved membership form with privacy policy
+- Improved Gutenberg page editor styling
+- Improved PHP 8 compatibility
+- Removed Google Plus option
+
+2.7
+- Added PHP8 compatibility
+- Added WordPress 5.8.1 compatibility
+- Added WooCommerce 5.8.0 compatibility
+- Updated Biagiotti Core plugin to 2.0.4
+- Updated WPBakery Page Builder to 6.7.0
+- Updated Revolution Slider plugin to 6.5.9
+- Fixed cart widgets
+- Fixed product percentage calculation
+- Fixed theme documentation link
+- Fixed Toggle widget tabs
+- Fixed hiding out of stock label option
+- Fixed creation of the Custom Sidebars in new Widgets layout
+- Fixed 'Bulk Select' functionality with Menus
+- Fixed product archive not displaying default sidebar widget area
+
+2.6
+- Added PHP8 compatibility
+- Theme Options, Shortcodes and Custom Post Types are now disabled if theme purchase code is not registered on live server
+- Updated Biagiotti Core plugin to 2.0.3
+- Updated Biagiotti Instagram Feed to 2.2.2
+
+2.5.2
+- Updated Revolution Slider plugin to 6.4.11
+- Updated Biagiotti Core plugin to 2.0.2
+
+2.5.1
+- Added compatibility with Qi Addons for Elementor plugin
+- Added WordPress 5.7.1 compatibility
+- Added WooCommerce 5.2.2 compatibility
+- Updated WPBakery Page Builder to 6.6.0
+- Updated Revolution Slider plugin to 6.4.8
+
+2.5
+- Added WordPress 5.6 compatibility
+- Updated WPBakery Page Builder to 6.5.0
+- Updated Revolution Slider plugin to 6.3.9
+- Updated Biagiotti Twitter Feed to 2.0.1
+- Fixed escaping url in Biagiotti Twitter Feed
+
+2.4.1
+- Added images licensed for digital use on websites made with Biagiotti theme
+- Added WooCommerce 4.8.0 compatibility
+- Updated Revolution Slider plugin to 6.3.3
+- Updated WPBakery Visual Composer plugin to 6.4.2
+- Fixed js bug with select2 and no Woocommerce installed
+- Fixed Revolution Slider preview functionality
+
+2.4
+- Updated Biagiotti Instagram Feed to 2.2.1
+- Fixed Instagram feed for business accounts
+
+2.3
+- Updated Biagiotti Instagram Feed to 2.2
+- Fixed prevent subscribe pop-up button not working
+
+2.2
+- Updated Revolution Slider plugin to 6.2.23
+- Updated WPBakery Visual Composer plugin to 6.4.0
+- Updated Biagiotti Instagram Feed to 2.1
+
+2.1
+- Added WordPress 5.5 compatibility
+- Added WooCommerce 4.4.1 compatibility
+- Updated Biagiotti Core plugin to 2.0.1
+- Updated Biagiotti Membership plugin to 1.0.1
+- Updated Revolution Slider plugin to 6.2.22
+- Updated WPBakery Visual Composer plugin to 6.3.0
+- Fixed 'Image with text' sc link target on WP Backery page builder
+- First main color option selectors regenerated
+- Fixed product sale mark when product is sold
+- Fixed NaN value - WooCommerce quantity input fields
+- Elementor fields import fix
+
+2.0
+- Added Elementor Page Builder compatibility
+- Updated Biagiotti Core to 2.0
+- Updated Biagiotti Instagram Feed to 2.0
+- Updated Biagiotti Twitter Feed to 2.0
+- Upadted "Image with text" schortcode with links over image option
+
+1.2
+- Added WooCommerce 4.0.0 compatibility
+- Added Biagiotti Membership as a required plugin
+- Updated Child theme to 1.0.1
+- Updated Revolution Slider to 6.2.2
+- Updated WPBakery to 6.1
+
+1.1.1
+- Updated Biagiotti Core to 1.2
+- Improved script loading
+
+1.1
+- Added Biagiotti Dashboard
+- Added WooCommerce 3.8.1 compatibility
+- Updated Revolution Slider to 6.1.5
+- Updated Biagiotti Core to 1.1
+- Removed unused file instagram-redirect.php from Biagiotti Instagram Feed plugin
+- Removed unused file twitter-redirect.php from Biagiotti Twitter Feed plugin
+- Updated Biagiotti Instagram Feed plugin to 1.0.1
+- Updated Biagiotti Twitter Feed plugin to 1.0.1
+- Improved Import
+- Improved Welcome Page
+- Changed Biagiotti Options Position

@@ -1,0 +1,225 @@
+.mkdf-login-register-content {
+	
+	&.mkdf-user-not-logged-in {
+		margin: 0 0 37px;
+	}
+	
+	> h3 {
+		margin: 0;
+		padding: 0;
+		
+		span {
+			width: 50%;
+			display: inline-block;
+			background: #fff;
+			padding: 30px 0;
+			box-sizing: border-box;
+		}
+	}
+	
+	.mkdf-social-login-holder {
+		@include mkdfTableLayout();
+	}
+	
+	.mkdf-social-login-holder-inner,
+	.mkdf-login-form-social-login {
+		@include mkdfTableCellLayout();
+	}
+	
+	.mkdf-login-form-social-login {
+		vertical-align: top;
+	}
+	
+	.mkdf-lost-pass-remember-holder {
+		
+		.mkdf-remember-holder,
+		.mkdf-lost-pass-holder {
+			width: 50%;
+			display: inline-block;
+		}
+		
+		.mkdf-lost-pass-holder {
+			float: right;
+			text-align: right;
+			
+			a {
+				color: $first-main-color;
+				
+				&:hover {
+					color: $default-heading-color;
+				}
+			}
+		}
+	}
+	
+	.mkdf-register-link-holder {
+		margin: 2px 0 0;
+		
+		a {
+			color: $first-main-color;
+			
+			&:hover {
+				color: $default-heading-color;
+			}
+		}
+		
+		.mkdf-modal-opener {
+			color: $first-main-color;
+		}
+	}
+	
+	.mkdf-social-login-holder-inner {
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-login-form,
+	.mkdf-register-form {
+		
+		fieldset {
+			
+			> div {
+				@include mkdfRelativeHolderLayout();
+				
+				&:not(.mkdf-register-button-holder):not(.mkdf-lost-pass-remember-holder):not(.mkdf-login-button-holder):not(.mkdf-register-link-holder):not(.mkdf-login-remember) {
+					margin-bottom: 14px;
+				}
+				
+			}
+			
+			label {
+				line-height: 25px;
+				display: inline-block;
+				margin-bottom: 3px;
+				color: #555555;
+				font-size: 15px;
+			}
+			
+			input[type=text],
+			input[type=password] {
+				position: relative;
+				width: 100%;
+				margin: 0;
+				padding: 17px 16px;
+				font-size: 16px;
+				line-height: 19px;
+				font-weight: inherit;
+				background-color: $default-background-color;
+				border: 1px solid $default-border-color;
+				outline: 0;
+				-webkit-appearance: none;
+				box-sizing: border-box;
+				transform: translateZ(0);
+				
+				@include mkdfPlaceholder {
+					color: inherit;
+				}
+			}
+			
+			.mkdf-login-button-holder {
+				
+				button.mkdf-btn {
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+	
+	.mkdf-reset-pass-form {
+		> div {
+			@include mkdfRelativeHolderLayout();
+			margin-bottom: 14px;
+		}
+	}
+	
+	.mkdf-login-form-social-login {
+		padding: 0 8.1%;
+		background-color: #1d1d1d;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-login-social-title {
+		margin: 45px 0 23px;
+		color: #fff;
+		font-size: 28px;
+		font-family: $default-heading-font;
+		font-weight: 700;
+		max-width: 65%;
+		line-height: 34px;
+	}
+	
+	.mkdf-login-button-holder {
+		
+		button.mkdf-btn {
+			margin: 32px 0 6px;
+			color: #fff;
+			border: none;
+			background-color: $first-main-color;
+			width: 100%;
+			padding: 16px 33px;
+			
+			.mkdf-btn-hover-item {
+				background-color: #f6f6f6 !important;
+			}
+			
+			&:hover {
+				background-color: $first-main-color !important;
+			}
+		}
+	}
+	
+	.mkdf-login-social-info {
+		margin-top: 30px;
+		font-family: $default-heading-font;
+		font-size: 18px;
+		text-align: center;
+		color: $default-heading-color;
+	}
+	
+	.mkdf-login-social-networks {
+		
+		.mkdf-facebook-login-holder,
+		.mkdf-google-login-holder {
+			display: inline-block;
+		}
+		
+		button.mkdf-btn {
+			width: 40px;
+			height: 40px;
+			line-height: 34px;
+			padding: 0;
+			display: inline-block;
+			margin: 9px 12px 0 0;
+			
+			> i {
+				margin: 0;
+				font-size: 18px;
+			}
+			
+			span {
+				margin: 0 0 0 2px;
+				font-size: 17px;
+			}
+			
+			.mkdf-btn-text {
+				display: none;
+			}
+		}
+	}
+	
+	.mkdf-membership-response-holder {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $default-text-color;
+		
+		text-align: center;
+		p {
+			color: #fff;
+			padding: 30px 50px;
+			font-size: 22px;
+		}
+	}
+	
+}

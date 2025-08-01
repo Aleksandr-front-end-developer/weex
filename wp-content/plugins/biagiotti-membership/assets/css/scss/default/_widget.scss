@@ -1,0 +1,494 @@
+/* Login/Register widget - start
+   ========================================================================== */
+
+/* User not logged in */
+.mkdf-login-register-widget {
+
+	&.mkdf-user-not-logged-in {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		
+		.mkdf-sidebar & {
+			width: 100%;
+		}
+		
+		.mkdf-login-opener {
+			
+			/* Top bar */
+			.mkdf-top-bar & {
+				font-family: $default-text-font;
+				font-size: 16px;
+				font-style: italic;
+				color:  #cecece;
+				
+				&:hover {
+					color: #fff;
+				}
+			}
+			
+			/* Menu area */
+			.mkdf-menu-area & {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				color: #9c9c9c;
+				font-size: 13px;
+				line-height: 23px;
+				margin: 0 10px;
+				font-weight: 600;
+				text-transform: uppercase;
+				
+				&:hover {
+					color: #000;
+				}
+			}
+			
+			.mkdf-dark-header .mkdf-menu-area:not(.fixed):not(.mkdf-sticky-header) & {
+				color: #000 !important;
+				
+				&:hover {
+					color: $default-heading-color;
+				}
+			}
+			
+			.mkdf-light-header .mkdf-menu-area:not(.fixed):not(.mkdf-sticky-header) & {
+				color: #fff !important;
+				
+				&:hover {
+					color: #fff;
+				}
+			}
+			
+			/* Sidebar */
+			.mkdf-sidebar & {
+				color: #000;
+				font-size: 13px;
+				font-weight: 500;
+				text-transform: uppercase;
+				
+				&:hover {
+					color: #ffec13;
+				}
+			}
+			
+			/* Footer */
+			footer & {
+				color: #000;
+				font-size: 13px;
+				font-weight: 500;
+				text-transform: uppercase;
+				
+				&:hover {
+					color: #ffec13;
+				}
+			}
+			
+			/* Side area */
+			.mkdf-side-menu & {
+				color: #000;
+				font-size: 13px;
+				font-weight: 500;
+				text-transform: uppercase;
+				
+				&:hover {
+					color: #ffec13;
+				}
+			}
+		}
+		
+		.mkdf-login-opener {
+			
+			&:after {
+				position: relative;
+				display: inline-block;
+				top: -1px;
+				content: "\e82a";
+				font-family: 'Linearicons-Free';
+				font-weight: 500;
+				font-style: normal;
+				margin-left: 6px;
+				color: #cecece;
+				vertical-align: middle;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+/* User logged in */
+
+.mkdf-login-register-widget {
+	
+	&.mkdf-user-logged-in {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+
+		.mkdf-logged-in-user {
+			display: table;
+			height: 100%;
+			
+			.mkdf-logged-in-user-inner {
+				display: table-cell;
+				vertical-align: middle;
+				
+				& > span {
+					font-family: $default-text-font;
+					font-size: 13px;
+					line-height: 20px;
+					font-weight: 600;
+					text-transform: uppercase;
+					transition: color .2s ease-out;
+					
+					img {
+						display: inline-block;
+						vertical-align: middle;
+						width: 20px;
+						height: 20px;
+					    margin: 0 7px 0 6px;
+						border-radius: 100%;
+					}
+
+					.mkdf-logged-in-user-name {
+						position: relative;
+						top: 2px;
+					}
+				}
+			}
+		}
+		
+		/* Top bar and menu area dropdown position */
+		.mkdf-menu-area &,
+		.mkdf-top-bar & {
+			
+			.mkdf-login-dropdown {
+				position: absolute;
+				top: 100%;
+				margin: 0;
+				left: -28px;
+				list-style-type: none;
+				text-align: left;
+				padding: 0;
+				width: 158px;
+				box-sizing: border-box;
+				max-height: 0;
+				overflow: hidden;
+				transition: 0.35s;
+				z-index: 100;
+				
+				li {
+					padding: 0;
+					margin: 0;
+					line-height: 1em;
+					
+					a {
+						display: block;
+						position: relative;
+						transition: color 0.3s ease;
+					}
+				}
+			}
+			
+			&:hover .mkdf-login-dropdown {
+				max-height: 100vh;
+				transition: .35s cubic-bezier(.66,.14,.58,1) .1s;
+			}
+		}
+		
+		/* Menu area style */
+		.mkdf-menu-area & {
+			cursor: pointer;
+			
+			/* User part */
+			.mkdf-logged-in-user {
+				height: 100%;
+				display: table;
+				vertical-align: middle;
+				
+				.mkdf-logged-in-user-inner {
+					display: table-cell;
+					vertical-align: middle;
+					height: 100%;
+					
+					& > span {
+						color: $default-heading-color;
+					}
+				}
+			}
+			
+			&:hover {
+				
+				.mkdf-logged-in-user {
+					
+					.mkdf-logged-in-user-inner {
+						
+						& > span {
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+			
+			/* Dropdown part */
+			.mkdf-login-dropdown {
+				background-color: $default-heading-color;
+				
+				li {
+					&:first-of-type {
+						margin-top: 22px;
+					}
+					
+					&:last-of-type {
+						margin-top: 25px;
+					}
+					
+					a {
+						font-family: $default-text-font;
+						padding: 0 35px 3px;
+						font-size: 16px;
+						line-height: 26px;
+						color: #cfcfcf;
+						
+						.mkdf-login-dropdown-item-inner {
+							position: relative;
+							display: block;
+							overflow: hidden;
+							box-sizing: border-box;
+							transition: padding .2s ease-in-out;
+						}
+						
+						&:hover {
+							color: #9f9f9f;
+						}
+					}
+				}
+			}
+			
+			&:hover .mkdf-login-dropdown {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		
+		.mkdf-dark-header .mkdf-menu-area:not(.fixed):not(.mkdf-sticky-header) & {
+			
+			.mkdf-logged-in-user {
+				
+				.mkdf-logged-in-user-inner {
+					
+					& > span span,
+					& > span i {
+						color: #000 !important;
+						transition: color .2s ease-out;
+						
+						&:hover {
+							color: $default-heading-color;
+						}
+					}
+				}
+			}
+		}
+		
+		.mkdf-light-header .mkdf-menu-area:not(.fixed):not(.mkdf-sticky-header) & {
+			
+			.mkdf-logged-in-user {
+				
+				.mkdf-logged-in-user-inner {
+					
+					& > span span,
+					& > span i {
+						color: #fff !important;
+						transition: color .2s ease-out;
+						
+						&:hover {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Top bar style */
+		.mkdf-top-bar & {
+			cursor: pointer;
+			
+			/* User part */
+			.mkdf-logged-in-user {
+				
+				.mkdf-logged-in-user-inner {
+					
+					& > span {
+						color: #cecece;
+
+						.mkdf-logged-in-user-name {
+						    font-family: $default-text-font;
+							font-size: 16px;
+							font-weight: 500;
+							font-style: italic;
+							text-transform: none;
+						}
+					}
+				}
+			}
+
+			&:hover {
+
+				.mkdf-logged-in-user {
+
+					.mkdf-logged-in-user-inner {
+
+						& > span {
+							color: #fff;
+						}
+					}
+				}
+			}
+			
+			/* Dropdown part */
+			.mkdf-login-dropdown {
+				background-color: $default-heading-color;
+				
+				li {
+					&:first-of-type {
+						margin-top: 22px;
+					}
+					
+					&:last-of-type {
+						margin-bottom: 25px;
+					}
+					
+					a {
+						font-family: $default-text-font;
+						padding: 0 35px 3px;
+						font-size: 16px;
+						line-height: 26px;
+						color: #cfcfcf;
+
+						.mkdf-login-dropdown-item-inner {
+							position: relative;
+							display: block;
+							overflow: hidden;
+							box-sizing: border-box;
+							transition: padding .2s ease-in-out;
+						}
+
+						&:hover {
+							color: $default-text-color;
+						}
+					}
+				}
+			}
+			
+			&:hover .mkdf-login-dropdown {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		
+		/* Sidebar style */
+		.mkdf-sidebar & {
+			
+			.mkdf-logged-in-user {
+				
+				.mkdf-logged-in-user-inner {
+					padding-bottom: 3px;
+					border-bottom: 1px solid $default-border-color;
+					
+					& > span {
+						color: $default-heading-color;
+						
+						i {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&:hover {
+
+				.mkdf-logged-in-user {
+
+					.mkdf-logged-in-user-inner {
+
+						& > span {
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Footer style */
+		footer & {
+			height: auto;
+			
+			.mkdf-logged-in-user {
+				
+				.mkdf-logged-in-user-inner {
+					padding-bottom: 3px;
+					border-bottom: 1px solid $default-border-color;
+					
+					& > span {
+						color: #d2d2d2;
+						
+						i {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&:hover {
+
+				.mkdf-logged-in-user {
+
+					.mkdf-logged-in-user-inner {
+
+						& > span {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Sidearea style */
+		.mkdf-side-menu & {
+			height: auto;
+			
+			.mkdf-logged-in-user {
+				
+				.mkdf-logged-in-user-inner {
+					padding-bottom: 3px;
+					border-bottom: 1px solid $default-border-color;
+					
+					& > span {
+						color: #d2d2d2;
+						
+						i {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&:hover {
+
+				.mkdf-logged-in-user {
+
+					.mkdf-logged-in-user-inner {
+
+						& > span {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Login/Register widget - end
+   ========================================================================== */

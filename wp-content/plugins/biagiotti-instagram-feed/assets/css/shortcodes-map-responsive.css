@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* ==========================================================================
+   Shortcodes responsive styles
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-instagram-feed:not(.mkdf-instagram-carousel) li img {
+    width: 100%;
+  }
+  .mkdf-instagram-feed:not(.mkdf-instagram-carousel).mkdf-col-6 li {
+    width: 25%;
+  }
+  .mkdf-instagram-feed:not(.mkdf-instagram-carousel).mkdf-col-9 li {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-instagram-feed:not(.mkdf-instagram-carousel).mkdf-col-6 li {
+    width: 33.33333%;
+  }
+  .mkdf-instagram-feed:not(.mkdf-instagram-carousel).mkdf-col-9 li {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-instagram-feed:not(.mkdf-instagram-carousel) li {
+    width: 50% !important;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/biagiotti-instagram-feed/assets/css/shortcodes-map-responsive.css.map */

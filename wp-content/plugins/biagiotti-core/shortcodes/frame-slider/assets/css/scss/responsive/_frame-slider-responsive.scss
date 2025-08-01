@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Frame Slider shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+	
+    .mkdf-frame-slider-holder {
+	    
+        .mkdf-fs-mask {
+            background-size: contain;
+        }
+    }
+}
+
+@include phone-landscape {
+	
+	.mkdf-frame-slider-holder {
+		
+		.mkdf-fs-mask {
+			height: 100%;
+			width: 100%;
+			background-size: 100% auto;
+		}
+
+		.mkdf-fs-slides {
+			top: 7%;
+
+			img {
+				width: 86%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+
+	.mkdf-frame-slider-holder {
+
+		.mkdf-fs-slides {
+			top: 4%;
+
+			img {
+				width: 97%;
+			}
+		}
+	}
+}
+
+@include smaller-phone-portrait {
+
+	.mkdf-frame-slider-holder {
+
+		.mkdf-fs-slides {
+			top: 3.4%;
+			left: 2.9%;
+
+			.mkdf-fs-slide {
+
+				a,
+				img {
+					width: calc(100% + 2px);
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Frame Slider shortcode responsive style - end
+   ========================================================================== */

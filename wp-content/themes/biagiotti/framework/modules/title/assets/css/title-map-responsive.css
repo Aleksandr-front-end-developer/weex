@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Title responsive styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   Title responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  @supports not (-webkit-overflow-scrolling: touch) {
+    .mkdf-title-holder.mkdf-has-bg-image.mkdf-bg-touch-cover {
+      background-size: cover;
+    }
+  }
+  .mkdf-title-holder.mkdf-has-bg-image:not(.mkdf-bg-responsive-disabled):not(.mkdf-bg-parallax) {
+    height: auto !important;
+    background-image: none !important;
+  }
+  .mkdf-title-holder.mkdf-has-bg-image:not(.mkdf-bg-responsive-disabled):not(.mkdf-bg-parallax) .mkdf-title-image {
+    display: block;
+  }
+  .mkdf-title-holder.mkdf-has-bg-image .mkdf-title-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 100% !important;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .mkdf-title-holder.mkdf-title-va-header-bottom:not(.mkdf-bg-responsive-disabled):not(.mkdf-bg-parallax) {
+    height: auto !important;
+  }
+  .mkdf-title-holder.mkdf-title-va-header-bottom .mkdf-title-wrapper {
+    padding-top: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Title responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Centered Title type responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-title-holder.mkdf-centered-type .mkdf-page-subtitle {
+    padding: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Centered Title type responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Custom Title type responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-title-holder.mkdf-custom-type .mkdf-page-subtitle {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-title-holder.mkdf-custom-type p.mkdf-page-subtitle {
+    font-size: 22px;
+    line-height: 30px;
+    left: 25%;
+  }
+}
+
+/* ==========================================================================
+   Custom Title type responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Standard With Breadcrumbs Title type responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-title-info,
+  .mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs-info {
+    display: block;
+    width: 100%;
+  }
+  .mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs-info {
+    margin: 10px 0 0;
+    text-align: initial;
+    white-space: inherit;
+  }
+}
+
+/* ==========================================================================
+   Standard With Breadcrumbs Title type responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Title responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=title-map-responsive.css.map */

@@ -1,0 +1,85 @@
+@include ipad-portrait {
+	
+	.mkdf-login-register-content.mkdf-user-not-logged-in {
+		
+		ul.mkdf-tabs-nav {
+			
+			> li {
+				margin: 0 5px 5px 0;
+				
+				a {
+					padding: 12px 30px 16px;
+				}
+				
+				&:last-of-type {
+					margin: 0 5px 5px 0;
+				}
+			}
+		}
+		
+		.mkdf-tab-container {
+			width: 100%;
+		}
+	}
+	
+	.mkdf-membership-main-wrapper {
+		display: block;
+	}
+	
+	.mkdf-membership-dashboard-nav-holder {
+		width: 100%;
+		display: block;
+		padding: 40px 30px;
+		margin-bottom: 0;
+		
+		ul {
+			padding-right: 0;
+			padding-bottom: 0;
+		}
+	}
+	
+	.mkdf-membership-dashboard-content-holder {
+		width: 100%;
+		padding: 40px 30px;
+		display: block;
+		margin-bottom: 0;
+		border: none;
+	}
+}
+
+@include ipad-landscape {
+	
+	.mkdf-login-register-content {
+		
+		> h3 {
+			
+			span {
+				width: 100%;
+				padding: 30px 7.8% 30px;
+			}
+		}
+		
+		.mkdf-social-login-holder-outer {
+			display: block;
+		}
+		
+		.mkdf-social-login-holder-inner {
+			display: block;
+			width: 100%;
+			padding: 0;
+			border-right: none;
+		}
+		
+		.mkdf-login-form-social-login {
+			vertical-align: middle;
+			display: block;
+			width: 100%;
+			padding: 0 8.3% 41px 7.8%;
+			
+			.mkdf-login-social-title {
+				margin: 0 0 23px;
+				padding: 29px 0 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.mkdf-ps-navigation {
+	position: relative;
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	padding: 0;
+	margin: 96px 0 0;
+	clear: both;
+    box-sizing: border-box;
+
+    .mkdf-ps-full-width-custom-layout & {
+        padding: 0 40px;
+    }
+	
+	.mkdf-ps-back-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		transform: translateX(-50%) translateY(-50%);
+		
+		a {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			cursor: pointer;
+			font-size: 23px;
+			line-height: 1;
+			
+			span {
+				display: block;
+				line-height: inherit;
+
+				&:before,
+				&:after {
+					display: block;
+					line-height: 14px;
+				}
+
+				&:after {
+					content: "\e0a6";
+				}
+			}
+			
+			&:hover {
+				color: $default-heading-color;
+			}
+		}
+	}
+	
+	.mkdf-ps-prev,
+	.mkdf-ps-next {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		width: 49%;
+		padding: 0;
+		box-sizing: border-box;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 46px;
+			line-height: 55px;
+			
+			.mkdf-ps-nav-mark {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				transition: .3s ease-out;
+				
+				svg {
+					position: relative;
+					top: 2px;
+				}
+			}
+		}
+	}
+	
+	.mkdf-ps-prev {
+		
+		a {
+			
+			.mkdf-ps-nav-mark {
+				left: 0;
+			}
+			
+			&:hover{
+				.mkdf-ps-nav-mark {
+					transform: translateX(-4px) translateZ(0);
+				}
+			}
+		}
+	}
+	
+	.mkdf-ps-next {
+		text-align: right;
+		
+		a {
+			
+			.mkdf-ps-nav-mark {
+				right: 0;
+			}
+			
+			&:hover{
+				.mkdf-ps-nav-mark {
+					transform: translateX(4px) translateZ(0);
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

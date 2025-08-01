@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-list-holder {
+	
+	&.mkdf-pl-gallery-overlay {
+		
+		&.mkdf-pl-has-shadow {
+			
+			.mkdf-pl-item-inner {
+				box-shadow: $default-box-shadow;
+			}
+		}
+		
+		article {
+			
+			&:hover {
+				
+				.mkdf-pli-text-holder {
+					clip-path: inset(0 0 0 0);
+					-webkit-clip-path: inset(0 0 0 0);
+					
+					.mkdf-pli-text {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+			
+			.mkdf-pl-item-inner {
+				overflow: hidden;
+			}
+		}
+		
+		.mkdf-pli-text-holder {
+			position: absolute;
+			display: block;
+			width: calc(100% - 20px);
+			height: calc(100% - 20px);
+			top: 10px;
+			left: 10px;
+			padding: 0;
+			background-color: $default-background-color;
+			text-align: center;
+			box-sizing: border-box;
+			clip-path: inset(100% 0 0 0);
+			-webkit-clip-path: inset(100% 0 0 0);
+			transition: .5s ease-out;
+
+			.mkdf-pli-text-wrapper{
+				height: 100%;
+			}
+
+			.mkdf-pli-text {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: .3s ease-out;
+				transition-delay: .15s;
+			}
+			
+			.mkdf-pli-category-holder {
+				margin: 0;
+			}
+			
+			
+		}
+	}
+	
+	.mkdf-safari &{
+		&.mkdf-pl-gallery-overlay {
+			article {
+				&:hover {
+					.mkdf-pli-text-holder {
+						transform: scaleY(1);
+					}
+				}
+				
+				.mkdf-pli-text-holder {
+					transform: scaleY(0);
+					transform-origin: bottom;
+					transition: .4s ease-in;
+					
+					.mkdf-pli-text {
+						transition-delay: .25s;
+					}
+				}
+			}
+		}
+	}
+	
+	.mkdf-edge &,
+	.mkdf-ms-explorer &{
+		article {
+			.mkdf-pli-text-holder {
+				opacity: 0;
+			}
+			
+			&:hover {
+				.mkdf-pli-text-holder {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */

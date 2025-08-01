@@ -1,0 +1,156 @@
+
+.mkdf-instagram-list-holder {
+	@include mkdfRelativeHolderLayout();
+	clear: both;
+
+	&.mkdf-instagram-arrow-outside-pos {
+		padding: 0 44px;
+		box-sizing: border-box;
+
+		.mkdf-owl-slider {
+
+			.owl-nav {
+
+				@include phone-portrait {
+		            display: none;
+		        }
+
+				.owl-prev {
+					left: -47px;
+				}
+
+				.owl-next {
+					right: -47px;
+				}
+			}
+		}
+	}
+}
+
+.mkdf-instagram-info {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 87px 92px 77px;
+	text-align: center;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: $default-background-color;
+
+	.mkdf-instagram-tagline {
+		font-family: $custom-font;
+		font-size: 40px;
+		color: $custom-text-color;
+	}
+
+	.mkdf-instagram-title {
+		margin: -3px 0 0;
+	}
+
+	.mkdf-instagram-subtitle {
+		margin: 11px 0 0;
+		font-family: $default-text-font;
+		font-size: 20px;
+		font-style: italic;
+		color: #484848;
+	}
+}
+
+.mkdf-instagram-feed {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		float: left;
+		box-sizing: border-box;
+		border: none !important;
+
+		a {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			@include mkdfGradientOverlay();
+			@include mkdfZoomImage();
+
+			.mkdf-instagram-icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: 30px;
+				font-weight: 500;
+				color: $default-heading-color;
+				opacity: 0;
+				z-index: 1;
+				transition: opacity .2s ease-in-out;
+				transform: translate(-50%, -50%);
+			}
+
+			&:hover {
+
+				.mkdf-instagram-icon {
+					opacity: 1;
+				}
+			}
+		}
+
+		img {
+			width: 100%;
+			display: block;
+			transform: translateZ(0);
+		}
+	}
+
+	&.mkdf-instagram-gallery {
+		$gallery_space_label: ('no', 'micro', 'tiny', 'small', 'normal', 'medium');
+		$gallery_space_width: (0, 3, 5, 10, 15, 20);
+
+		@for $i from 0 to length($gallery_space_label) {
+			&.mkdf-#{nth($gallery_space_label,$i+1)}-space {
+				$column_width: nth($gallery_space_width, $i+1);
+				$column_width_margin: $column_width * 2;
+
+				@if ($column_width == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$column_width}px -#{$column_width_margin}px;
+				}
+
+				li {
+					padding: 0 #{$column_width}px;
+					margin: 0 0 #{$column_width_margin}px;
+				}
+			}
+		}
+
+		$gallery_columns: ('1', '2', '3', '4', '5', '6', '9');
+		@for $i from 0 to length($gallery_columns) {
+			&.mkdf-col-#{nth($gallery_columns, $i+1)} {
+				$column_width: 100%/($i+1);
+
+				@if ($i == 6) {
+					$column_width: 100%/9;
+				}
+
+				li {
+					width: $column_width;
+				}
+			}
+		}
+	}
+
+	&.mkdf-instagram-carousel {
+
+		li {
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+			a {
+				position: relative;
+				display: block;
+				height: 100%;
+			}
+		}
+	}
+}

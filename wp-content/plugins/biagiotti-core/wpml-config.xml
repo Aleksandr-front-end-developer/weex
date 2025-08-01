@@ -1,0 +1,755 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="translate">mkdf_testimonial_tagline</custom-field>
+		<custom-field action="translate">mkdf_testimonial_title</custom-field>
+		<custom-field action="translate">mkdf_testimonial_text</custom-field>
+		<custom-field action="translate">mkdf_testimonial_author</custom-field>
+		<custom-field action="translate">mkdf_testimonial_author_position</custom-field>
+		<custom-field action="copy">mkdf_page_content_behind_header_meta</custom-field>
+		<custom-field action="copy">portfolio_single_back_to_link</custom-field>
+		<custom-field action="copy">mkdf_disable_vertical_header_background_image_meta</custom-field>
+		<custom-field action="copy">mkdf_disable_header_widget_areas_meta</custom-field>
+		<custom-field action="copy">mkdf-portfolio-image-gallery</custom-field>
+		<custom-field action="copy">mkdf_portfolio_single_template_meta</custom-field>
+		<custom-field action="copy">mkdf_title_area_type_meta</custom-field>
+		<custom-field action="copy">mkdf_header_type_meta</custom-field>
+		<custom-field action="copy">mkdf_top_bar_meta</custom-field>
+		<custom-field action="translate">mkdf_portfolio_properties</custom-field>
+		<custom-field action="copy">mkdf_top_bar_in_grid_meta</custom-field>
+		<custom-field action="copy">mkdf_menu_area_in_grid_meta</custom-field>
+		<custom-field action="copy">mkdf_page_content_padding</custom-field>
+		<custom-field action="copy">mkdf_page_content_padding_mobile</custom-field>
+		<custom-field action="copy">mkdf_title_area_height_meta</custom-field>
+		<custom-field action="copy">slide_template</custom-field>
+		<custom-field action="copy">mkdf_menu_area_side_padding_meta</custom-field>
+		<custom-field action="copy">mkdf_header_behaviour_meta</custom-field>
+		<custom-field action="copy">mkdf_title_area_title_tag_meta</custom-field>
+		<custom-field action="copy">mkdf_title_area_background_color_meta</custom-field>
+		<custom-field action="copy">mkdf_title_area_background_image_behavior_meta</custom-field>
+		<custom-field action="copy">mkdf_show_title_area_meta</custom-field>
+		<custom-field action="copy">mkdf_video_type_meta</custom-field>
+		<custom-field action="copy">mkdf_audio_type_meta</custom-field>
+		<custom-field action="copy">mkdf_blog_single_sidebar_layout_meta</custom-field>
+		<custom-field action="copy">mkdf_blog_single_center_content_meta</custom-field>
+		<custom-field action="copy">mkdf_post_gallery_images_meta</custom-field>
+		<custom-field action="copy">mkdf_title_area_background_image_meta</custom-field>
+		<custom-field action="translate">mkdf_post_link_link_meta</custom-field>
+		<custom-field action="translate">mkdf_post_quote_text_meta</custom-field>
+		<custom-field action="translate">mkdf_post_quote_author_meta</custom-field>
+		<custom-field action="translate">mkdf_post_video_link_meta</custom-field>
+		<custom-field action="translate">mkdf_post_audio_link_meta</custom-field>
+		<custom-field action="translate">mkdf_title_area_subtitle_meta</custom-field>
+	</custom-fields>
+	<custom-types>
+		<custom-type translate="1">masonry-gallery</custom-type>
+		<custom-type translate="1">portfolio-item</custom-type>
+		<custom-type translate="1">proofing-gallery</custom-type>
+		<custom-type translate="1">stock-photography</custom-type>
+		<custom-type translate="1">team-member</custom-type>
+		<custom-type translate="1">testimonials</custom-type>
+	</custom-types>
+	<taxonomies>
+		<taxonomy translate="1">masonry-gallery-category</taxonomy>
+		<taxonomy translate="1">portfolio-category</taxonomy>
+		<taxonomy translate="1">portfolio-tag</taxonomy>
+		<taxonomy translate="1">stock-photography-category</taxonomy>
+		<taxonomy translate="1">stock-photography-tag</taxonomy>
+		<taxonomy translate="1">team-category</taxonomy>
+		<taxonomy translate="1">testimonials-category</taxonomy>
+	</taxonomies>
+	<admin-texts>
+		<key name="mkdf_options_biagiotti">
+			<key name="logo_image" />
+			<key name="logo_image_dark" />
+			<key name="logo_image_light" />
+			<key name="logo_image_sticky" />
+			<key name="logo_image_mobile" />
+			<key name="subscribe_popup_title" />
+			<key name="subscribe_popup_subtitle" />
+			<key name="subscribe_popup_form_description" />
+		</key>
+		<key name="widget_mkdf_author_info_widget">
+			<key name="*">
+				<key name="author_username" />
+			</key>
+		</key>
+		<key name="widget_mkdf_blog_list_widget">
+			<key name="*">
+				<key name="widget_title" />
+			</key>
+		</key>
+		<key name="widget_mkdf_button_widget">
+			<key name="*">
+				<key name="text" />
+				<key name="link" />
+			</key>
+		</key>
+		<key name="widget_mkdf_custom_font_widget">
+			<key name="*">
+				<key name="title" />
+			</key>
+		</key>
+		<key name="widget_mkdf_icon_widget">
+			<key name="*">
+				<key name="icon_text" />
+				<key name="link" />
+			</key>
+		</key>
+		<key name="widget_mkdf_image_gallery_widget">
+			<key name="*">
+				<key name="widget_title" />
+				<key name="custom_links" />
+			</key>
+		</key>
+		<key name="widget_mkdf_recent_posts">
+			<key name="*">
+				<key name="widget_title" />
+			</key>
+		</key>
+		<key name="widget_mkdf_social_icon_widget">
+			<key name="*">
+				<key name="icon_text" />
+				<key name="social_text" />
+				<key name="link" />
+			</key>
+		</key>
+		<key name="widget_mkdf_social_icons_group_widget">
+			<key name="*">
+				<key name="widget_title" />
+				<key name="link_*" />
+			</key>
+		</key>
+		<key name="widget_mkdf_instagram_widget">
+			<key name="*">
+				<key name="title" />
+				<key name="instagram_tagline" />
+				<key name="instagram_title" />
+				<key name="instagram_subtitle" />
+			</key>
+		</key>
+		<key name="widget_mkdf_contact_form_7_widget">
+			<key name="*">
+				<key name="widget_title" />
+			</key>
+		</key>
+	</admin-texts>
+	<shortcodes>
+		<shortcode>
+			<tag>mkdf_accordion</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">accordion_tab</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_banner</tag>
+			<attributes>
+				<attribute>custom_title</attribute>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_button</tag>
+			<attributes>
+				<attribute>text</attribute>
+				<attribute>link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_call_to_action</tag>
+			<attributes>
+				<attribute>button_text</attribute>
+				<attribute>content</attribute>
+				<attribute>button_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_clients_carousel</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">clients_item</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_clients_grid</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">clients_item</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_countdown</tag>
+			<attributes>
+				<attribute>month_label</attribute>
+				<attribute>day_label</attribute>
+				<attribute>hour_label</attribute>
+				<attribute>minute_label</attribute>
+				<attribute>second_label</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_counter</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_custom_font</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>typed_ending_1</attribute>
+				<attribute>typed_ending_2</attribute>
+				<attribute>typed_ending_3</attribute>
+				<attribute>typed_ending_4</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_frame_slider</tag>
+			<attributes>
+				<attribute>custom_links</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_full_screen_sections</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">fullscreen_section_items</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_icon_list_item</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_icon</tag>
+			<attributes>
+				<attribute>link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_image_gallery</tag>
+			<attributes>
+				<attribute>custom_links</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_image_with_text</tag>
+			<attributes>
+				<attribute>custom_link</attribute>
+				<attribute>image_link_text1</attribute>
+				<attribute>image_link1</attribute>
+				<attribute>image_link_text2</attribute>
+				<attribute>image_link2</attribute>
+				<attribute>tagline</attribute>
+				<attribute>tagline_top_margin</attribute>
+				<attribute>title</attribute>
+				<attribute>text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_pie_chart</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_pricing_table</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">pricing_table_item</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_progress_bar</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_section_title</tag>
+			<attributes>
+				<attribute>tagline</attribute>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>text</attribute>
+				<attribute>button_text</attribute>
+				<attribute>button_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_single_image</tag>
+			<attributes>
+				<attribute>custom_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_social_share</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_tabs</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">tabs_item</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_team_carousel</tag>
+			<attributes>
+				<attribute type="area" encoding="urlencoded_json">team_item</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_team</tag>
+			<attributes>
+				<attribute>team_name</attribute>
+				<attribute>team_position</attribute>
+				<attribute>team_text</attribute>
+				<attribute>team_link</attribute>
+				<attribute type="area" encoding="urlencoded_json">social_icon</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_video_button</tag>
+			<attributes>
+				<attribute>video_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>mkdf_instagram_list</tag>
+			<attributes>
+				<attribute>tagline</attribute>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+			</attributes>
+		</shortcode>
+	</shortcodes>
+	<elementor-widgets>
+		<widget name="mkdf_accordion">
+			<fields-in-item items_of="accordion_tab">
+				<field>title</field>
+				<field>text</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_banner">
+			<fields>
+				<field>info_content_padding</field>
+				<field>custom_title</field>
+				<field>custom_title_padding</field>
+				<field>custom_title_font_size</field>
+				<field>custom_title_line_height</field>
+				<field>title</field>
+				<field>title_light_words</field>
+				<field>title_top_margin</field>
+				<field>subtitle</field>
+				<field>link>url</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_button">
+			<fields>
+				<field>text</field>
+				<field>link>url</field>
+				<field>font_size</field>
+				<field>margin</field>
+				<field>padding</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_call_to_action">
+			<fields>
+				<field>button_text</field>
+				<field>content</field>
+				<field>button_top_margin</field>
+				<field>button_link>url</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_clients_carousel">
+			<fields>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+			</fields>
+			<fields-in-item items_of="clients_item">
+				<field>image_size</field>
+				<field key_of="link">url</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_clients_grid">
+			<fields-in-item items_of="clients_item">
+				<field>image_size</field>
+				<field key_of="link">url</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_countdown">
+			<fields>
+				<field>month_label</field>
+				<field>day_label</field>
+				<field>hour_label</field>
+				<field>minute_label</field>
+				<field>second_label</field>
+				<field>digit_font_size</field>
+				<field>label_font_size</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_counter">
+			<fields>
+				<field>digit</field>
+				<field>digit_font_size</field>
+				<field>title</field>
+				<field>text</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_custom_font">
+			<fields>
+				<field>title</field>
+				<field>type_out_position</field>
+				<field>typed_ending_1</field>
+				<field>typed_ending_2</field>
+				<field>typed_ending_3</field>
+				<field>typed_ending_4</field>
+				<field>title_break_words</field>
+				<field>font_family</field>
+				<field>font_size</field>
+				<field>line_height</field>
+				<field>letter_spacing</field>
+				<field>margin</field>
+				<field>font_size_1366</field>
+				<field>line_height_1366</field>
+				<field>font_size_1024</field>
+				<field>line_height_1024</field>
+				<field>font_size_768</field>
+				<field>line_height_768</field>
+				<field>font_size_680</field>
+				<field>line_height_680</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_frame_slider">
+			<fields>
+				<field>custom_links</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_full_screen_sections">
+			<fields-in-item items_of="fullscreen_section_items">
+				<field>background_position</field>
+				<field>padding</field>
+				<field key_of="link">url</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_gallery_blocks">
+			<fields>
+				<field>featured_image_size</field>
+				<field>image_size</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_google_map">
+			<fields>
+				<field>address1</field>
+				<field>address2</field>
+				<field>address3</field>
+				<field>address4</field>
+				<field>address5</field>
+				<field>saturation</field>
+				<field>lightness</field>
+				<field>zoom</field>
+				<field>map_height</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_icon_list_item">
+			<fields>
+				<field>item_margin</field>
+				<field>icon_size</field>
+				<field>title</field>
+				<field>title_size</field>
+				<field>title_padding</field>
+			</fields>
+		</widget>
+		<widget name="mkd_icon_with_text">
+			<fields>
+				<field>title</field>
+				<field>text</field>
+				<field>link>url</field>
+				<field>target</field>
+				<field>custom_icon_size</field>
+				<field>shape_size</field>
+				<field>icon_border_width</field>
+				<field>icon_animation_delay</field>
+				<field>bg_scale_size</field>
+				<field>bg_margin</field>
+				<field>title_top_margin</field>
+				<field>text_top_margin</field>
+				<field>text_padding</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_icon">
+			<fields>
+				<field>custom_size</field>
+				<field>border_radius</field>
+				<field>shape_size</field>
+				<field>border_width</field>
+				<field>margin</field>
+				<field>icon_animation_delay</field>
+				<field>link>url</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_image_gallery">
+			<fields>
+				<field>image_size</field>
+				<field>custom_links</field>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_image_with_text">
+			<fields>
+				<field>image_size</field>
+				<field>custom_link</field>
+				<field>image_link_text1</field>
+				<field>image_link1>url</field>
+				<field>image_link_text2</field>
+				<field>image_link2>url</field>
+				<field>tagline</field>
+				<field>tagline_top_margin</field>
+				<field>title</field>
+				<field>title_top_margin</field>
+				<field>text</field>
+				<field>text_top_margin</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_pie_chart">
+			<fields>
+				<field>percent</field>
+				<field>size</field>
+				<field>title</field>
+				<field>text</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_pricing_table">
+			<fields-in-item items_of="pricing_table_item">
+				<field>active_custom_text</field>
+				<field>title</field>
+				<field>price</field>
+				<field>currency</field>
+				<field>price_period</field>
+				<field>button_text</field>
+				<field key_of="link">url</field>
+				<field>content</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_progress_bar">
+			<fields>
+				<field>percent</field>
+				<field>title</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_section_title">
+			<fields>
+				<field>holder_padding</field>
+				<field>tagline</field>
+				<field>title</field>
+				<field>subtitle</field>
+				<field>text</field>
+				<field>image_top_margin</field>
+				<field>image_bottom_margin</field>
+				<field>button_text</field>
+				<field>tagline_font_size</field>
+				<field>tagline_line_height</field>
+				<field>tagline_margin</field>
+				<field>title_break_words</field>
+				<field>subtitle_font_size</field>
+				<field>subtitle_line_height</field>
+				<field>subtitle_margin</field>
+				<field>text_font_size</field>
+				<field>text_line_height</field>
+				<field>text_margin</field>
+				<field>button_link>url</field>
+				<field>button_top_margin</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_separator">
+			<fields>
+				<field>width</field>
+				<field>thickness</field>
+				<field>top_margin</field>
+				<field>bottom_margin</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_single_image">
+			<fields>
+				<field>image_size</field>
+				<field>custom_link>url</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_social_share">
+			<fields>
+				<field>title</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_tabs">
+			<fields-in-item items_of="tabs_item">
+				<field>tab_title</field>
+				<field>tab_text</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_team_carousel">
+			<fields>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+			</fields>
+			<fields-in-item items_of="team_item">
+				<field>team_name</field>
+				<field>team_position</field>
+				<field>team_text</field>
+				<field key_of="team_link">url</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_team">
+			<fields>
+				<field>team_name</field>
+				<field>team_position</field>
+				<field>team_text</field>
+				<field key_of="team_link">url</field>
+			</fields>
+			<fields-in-item items_of="social_icon">
+				<field>team_social_icon_link>url</field>
+			</fields-in-item>
+		</widget>
+		<widget name="mkdf_video_button">
+			<fields>
+				<field>video_link>url</field>
+				<field>play_button_size</field>
+				<field>play_button_width</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_instagram_list">
+			<fields>
+				<field>number_of_photos</field>
+				<field>transient_time</field>
+				<field>tagline</field>
+				<field>title</field>
+				<field>subtitle</field>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_twitter_list">
+			<fields>
+				<field>user_id</field>
+				<field>number_of_tweets</field>
+				<field>transient_time</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_portfolio_category_list">
+			<fields>
+				<field>custom_image_width</field>
+				<field>custom_image_height</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_portfolio_list">
+			<fields>
+				<field>number_of_items</field>
+				<field>custom_image_width</field>
+				<field>custom_image_height</field>
+				<field>category</field>
+				<field>selected_projects</field>
+				<field>tag</field>
+				<field>content_top_margin</field>
+				<field>content_bottom_margin</field>
+				<field>excerpt_length</field>
+				<field>load_more_top_margin</field>
+				<field>filter_bottom_margin</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_portfolio_project_info">
+			<fields>
+				<field>project_id</field>
+				<field>project_info_title</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_portfolio_slider">
+			<fields>
+				<field>number_of_items</field>
+				<field>custom_image_width</field>
+				<field>custom_image_height</field>
+				<field>category</field>
+				<field>selected_projects</field>
+				<field>tag</field>
+				<field>content_top_margin</field>
+				<field>content_bottom_margin</field>
+				<field>excerpt_length</field>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_testimonials">
+			<fields>
+				<field>number</field>
+				<field>category</field>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_blog_list">
+			<fields>
+				<field>number_of_posts</field>
+				<field>category</field>
+				<field>image_size</field>
+				<field>custom_image_width</field>
+				<field>custom_image_height</field>
+				<field>excerpt_length</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_blog_slider">
+			<fields>
+				<field>number_of_posts</field>
+				<field>category</field>
+				<field>image_size</field>
+				<field>custom_image_width</field>
+				<field>custom_image_height</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_product_exhibition">
+			<fields>
+				<field>number_of_posts</field>
+				<field>taxonomy_values</field>
+				<field>image_size</field>
+				<field>excerpt_length</field>
+				<field>main_title</field>
+				<field>tagline</field>
+				<field>tagline_margin</field>
+				<field>link>url</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_product_info">
+			<fields>
+				<field>product_id</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_product_list_carousel">
+			<fields>
+				<field>number_of_posts</field>
+				<field>taxonomy_values</field>
+				<field>slider_speed</field>
+				<field>slider_speed_animation</field>
+				<field>excerpt_length</field>
+				<field>info_top_margin</field>
+				<field>info_bottom_margin</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_product_list_simple">
+			<fields>
+				<field>number_of_posts</field>
+				<field>taxonomy_values</field>
+				<field>excerpt_length</field>
+			</fields>
+		</widget>
+		<widget name="mkdf_product_list">
+			<fields>
+				<field>number_of_posts</field>
+				<field>taxonomy_values</field>
+				<field>excerpt_length</field>
+				<field>info_top_margin</field>
+				<field>info_bottom_margin</field>
+			</fields>
+		</widget>
+	</elementor-widgets>
+</wpml-config>

@@ -1,0 +1,100 @@
+name,slug,parent,language,translation_group
+Гель лак,hel-lak,,ua,1
+Gel Polish,gel-polish,,en,1
+Гель-лак,hel-lak-ru,,ru,1
+Світловідблискуючі. Lets dance,svitlovidblyskuiuchi-lets-dance,гель-лак,ua,2
+Reflective. Let's dance,reflective-lets-dance,гель-лак,en,2
+Светоотражающие. Let's dance,svetootrazhaiushchye-lets-dance,гель-лак,ru,2
+Bada boom,bada-boom,світловідблискуючі.-lets-dance,ua,3
+Bada boom,bada-boom-en,світловідблискуючі.-lets-dance,en,3
+Bada boom,bada-boom-ru,світловідблискуючі.-lets-dance,ru,3
+Basic collection. Основна колекція,basic-collection-osnovna-kolektsiia,гель-лак,ua,4
+Basic collection.,Basic-collection,гель-лак,en,4
+Basic collection. Основная коллекция,basic-collection-osnovnaia-kollektsyia,гель-лак,ru,4
+З пластівцями. Bits,z-plastivtsiamy-bits,гель-лак,ua,5
+With flakes. Bits,with-flakes-bits,гель-лак,en,5
+С хлопьями. Bits,s-khlopiamy-bits,гель-лак,ru,5
+Котяче око. Cat,kotiache-oko-cat,гель-лак,ua,6
+Cat Eye,cat-eye,гель-лак,en,6
+Кошачий глаз. Cat,koshachyi-hlaz-cat,гель-лак,ru,6
+Гель фарба,hel-farba,,ua,7
+Gel paint,gel-paint,,en,7
+Гель краска,hel-kraska,,ru,7
+Зняті з продажу. Не додаємо,zniati-z-prodazhu-ne-dodaiemo,,ua,8
+Discontinued. We do not add,discontinued-we-do-not-add,,en,8
+Сняты с продаж. Не добавляем,sniaty-s-prodazh-ne-dobavliaem,,ru,8
+Hard pro,hard-pro,зняті-з-продажу.-не-додаємо,ua,9
+Hard pro,hard-pro-en,зняті-з-продажу.-не-додаємо,en,9
+Hard pro,hard-pro-ru,зняті-з-продажу.-не-додаємо,ru,9
+Confetti,confetti,зняті-з-продажу.-не-додаємо,ua,10
+Confetti,confetti-en,зняті-з-продажу.-не-додаємо,en,10
+Confetti,confetti-ru,зняті-з-продажу.-не-додаємо,ru,10
+Бази,bazy,,ua,11
+Bases,bases,,en,11
+Базы,Bazy-ru,,ru,11
+З ефектами,z-efektamy,бази,ua,12
+With effects,with-effects-en,бази,en,12
+С эффектами,S-effektamy-ru,бази,ru,12
+Flakes,flakes,з-ефектами,ua,13
+Flakes,flakes-en,з-ефектами,en,13
+Flakes,flakes-ru,з-ефектами,ru,13
+Truffle,truffle,з-ефектами,ua,14
+Truffle,truffle-en,з-ефектами,en,14
+Truffle,truffle-ru,з-ефектами,ru,14
+Shimmer,shimmer,з-ефектами,ua,15
+Shimmer,shimmer-en,з-ефектами,en,15
+Shimmer,shimmer-ru,з-ефектами,ru,15
+Color Dust,color-dust,з-ефектами,ua,16
+Color Dust,color-dust-en,з-ефектами,en,16
+Color Dust,color-dust-ru,з-ефектами,ru,16
+Onyx gem,onyx-gem,з-ефектами,ua,17
+Onyx gem,onyx-gem-en,з-ефектами,en,17
+Onyx gem,onyx-gem-ru,з-ефектами,ru,17
+Flash send,flash-send,з-ефектами,ua,18
+Flash send,flash-send-en,з-ефектами,en,18
+Flash send,flash-send-ru,з-ефектами,ru,18
+Touch of silk,touch-of-silk,з-ефектами,ua,19
+Touch of silk,touch-of-silk-en,з-ефектами,en,19
+Touch of silk,touch-of-silk-ru,з-ефектами,ru,19
+Potal,potal,з-ефектами,ua,20
+Potal,potal-en,з-ефектами,en,20
+Potal,potal-ru,з-ефектами,ru,20
+Прозорі,prozori,бази,ua,21
+Transparent,transparent-en,бази,en,21
+Прозрачные,prozrachnye-ru,бази,ru,21
+Камуфлюючі.Кольорові(емаль),kamufliuiuchikoloroviemal,бази,ua,22
+Camouflage. Colored (enamel),camouflage-colored-enamel,бази,en,22
+Камуфлирующие. Цветные (эмаль),Kamuflyruiushchye-tsvetnye-emal,бази,ru,22
+Hard,hard,камуфлюючі.кольорові(емаль),ua,23
+Hard,hard-en,камуфлюючі.кольорові(емаль),en,23
+Hard,hard-ru,камуфлюючі.кольорові(емаль),ru,23
+Light pro,light-pro,камуфлюючі.кольорові(емаль),ua,24
+Light pro,light-pro-en,камуфлюючі.кольорові(емаль),en,24
+Light pro,light-pro-ru,камуфлюючі.кольорові(емаль),ru,24
+Autumn Vibe,autumn-vibe,камуфлюючі.кольорові(емаль),ua,25
+Autumn Vibe,autumn-vibe-en,камуфлюючі.кольорові(емаль),en,25
+Autumn Vibe,autumn-vibe-ru,камуфлюючі.кольорові(емаль),ru,25
+Sense,sense,камуфлюючі.кольорові(емаль),ua,26
+Sense,sense-en,камуфлюючі.кольорові(емаль),en,26
+Sense,sense-ru,камуфлюючі.кольорові(емаль),ru,26
+Light,light,камуфлюючі.кольорові(емаль),ua,27
+Light,light-en,камуфлюючі.кольорові(емаль),en,27
+Light,light-ru,камуфлюючі.кольорові(емаль),ru,27
+Flex,flex,камуфлюючі.кольорові(емаль),ua,28
+Flex,flex-en,камуфлюючі.кольорові(емаль),en,28
+Flex,flex-ru,камуфлюючі.кольорові(емаль),ru,28
+Укріплення та нарощування,ukriplennia-ta-naroshchuvannia,,ua,29
+Strengthening and building up,strengthening-and-building-up,,en,29
+Укрепление и наращивание,ukreplenye-y-narashchyvanye,,ru,29
+Acrygel,acrygel,укріплення-та-нарощування,ua,30
+Acrygel,acrygel-en,укріплення-та-нарощування,en,30
+Acrygel,acrygel-ru,укріплення-та-нарощування,ru,30
+Smart gel,smart-gel,укріплення-та-нарощування,ua,31
+Smart gel,smart-gel-en,укріплення-та-нарощування,en,31
+Smart gel,smart-gel-ru,укріплення-та-нарощування,ru,31
+Засоби,zasoby,,ua,32
+Means,means,,en,32
+Средства,sredstva,,ru,32
+Топи,topy,,ua,33
+tops,tops,,en,33
+Топы,topы,,ru,33

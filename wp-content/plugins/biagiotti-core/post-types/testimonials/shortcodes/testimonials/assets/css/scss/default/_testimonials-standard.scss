@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+
+.mkdf-testimonials-holder {
+	
+	&.mkdf-testimonials-standard {
+		text-align: center;
+
+		@include ipad-landscape {
+
+            .mkdf-testimonials {
+                padding: 0;
+            }
+        }
+		
+		.mkdf-testimonial-image {
+			@include mkdfRelativeHolderLayout();
+			margin: 25px 0 0;
+			
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		
+		.mkdf-testimonial-title {
+			margin: 0;
+		}
+		
+		.mkdf-testimonial-tagline {
+			font-family: $custom-font;
+			font-size: 40px;
+			color: #cfc4c4;
+			padding: 40px 0 0;
+		}
+		
+		.mkdf-testimonial-author {
+			font-family: $default-text-font;
+			color: $default-text-color;
+			font-size: 19px;
+			margin: 26px 0 0;
+			text-transform: none;
+			letter-spacing: normal;
+			
+			&:before {
+				content: '-';
+				position: relative;
+				display: inline-block;
+				bottom: 0;
+				top: 0;
+				color: $default-text-color;
+			}
+			
+			&:after {
+				content: '-';
+				position: relative;
+				display: inline-block;
+				bottom: 0;
+				top: 0;
+				color: $default-text-color;
+			}
+		}
+		
+		.mkdf-testimonial-text {
+			width: 80%;
+			margin: 0 auto;
+			padding: 21px 0 0;
+			font-size: 26px;
+			line-height: 30px;
+			font-style: italic;
+			color: #2d2d2d;
+			
+			@include phone-landscape {
+				width: 85%;
+			}
+		}
+		
+		.mkdf-owl-slider .owl-item {
+			opacity: 0;
+			transition: .4s ease-out;
+			
+			&.active{
+				opacity: 1;
+			}
+		}
+		
+		/* Light/Dark styles */
+		&.mkdf-testimonials-light {
+			
+			.mkdf-testimonial-title,
+			.mkdf-testimonial-text,
+			.mkdf-testimonial-author {
+				color: #fff;
+			}
+			
+			.owl-dots {
+				
+				.owl-dot {
+					
+					span {
+						border: 2px solid rgba(#fff, .5);
+					}
+					
+					&:hover,
+					&.active {
+						
+						span {
+							background-color: #fff;
+							border-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */

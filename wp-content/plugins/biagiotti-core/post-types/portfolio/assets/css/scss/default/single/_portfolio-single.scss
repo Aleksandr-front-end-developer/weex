@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+	@include mkdfRelativeHolderLayout();
+	margin: 0 0 50px;
+	
+    .mkdf-ps-image-holder {
+	    @include mkdfRelativeHolderLayout();
+	    
+	    .mkdf-ps-image {
+		    
+		    &:not(.mkdf-item-space) {
+			    @include mkdfRelativeHolderLayout();
+			    box-sizing: border-box;
+		    }
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+	
+	.mkdf-ps-info-holder {
+		@include mkdfRelativeHolderLayout();
+		
+		.mkdf-ps-info-item {
+			@include mkdfRelativeHolderLayout();
+			margin: 0 0 8px;
+
+			p, a {
+				display: inline-block;
+				margin: 0;
+				color: #5c5c5c;
+			}
+
+			&:not(.mkdf-ps-content-item) p, a {
+				@include mkdfHeadingStyle(h6);
+				color: #5c5c5c;
+			}
+
+			a:hover {
+				color: $first-main-color;
+			}
+
+			.mkdf-social-share-holder {
+
+				.mkdf-social-title {
+					@include mkdfHeadingStyle(h6);
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0 2px 0 0;
+				}
+
+				ul li a {
+					font-size: 14px;
+					color: $default-heading-color;
+
+					&:hover {
+						color: $first-main-color;
+					}
+				}
+			}
+		}
+		
+		.mkdf-ps-info-title {
+			display: inline-block;
+			margin: 0 1px 0 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+	
+	.mkdf-ps-image-holder {
+		
+		&.mkdf-grid-masonry-list {
+			
+			.mkdf-ps-image {
+				
+				a {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

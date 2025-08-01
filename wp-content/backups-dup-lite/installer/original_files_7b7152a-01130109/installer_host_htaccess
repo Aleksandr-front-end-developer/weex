@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+# If images not found on development site, load from production
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^wp-content/uploads/[^/]+/.+\.(jpe?g|png|gif)$ https://weexnail.com/$0 [R=302,L]
+</IfModule>

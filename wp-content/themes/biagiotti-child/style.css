@@ -1,0 +1,57 @@
+/*
+Theme Name: Biagiotti Child
+Theme URI: https://biagiotti.qodeinteractive.com
+Description: A child theme of Biagiotti Theme
+Author: Mikado Themes
+Author URI: http://themeforest.net/user/mikado-themes
+Version: 1.0.1
+Text Domain: biagiotti
+Template: biagiotti
+*/
+
+h4.weex-color-filter {
+	margin: 25px 0!important;
+}
+
+.mkdf-title-holder.mkdf-standard-type.mkdf-title-va-header-bottom {
+	display: none;
+}
+
+.mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner {
+	padding-top: 0;
+}
+
+.mkdf-page-header {
+	padding-top: 10px;
+}
+
+.mkdf-vertical-align-containers {
+	height: unset
+}
+
+.widget.woocommerce.widget_product_categories ul li a {
+	color: #FFFFFF;
+	background-color: unset;
+}
+
+.weex-color-filter {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 10px;
+}
+
+.wc-block-components-price-slider--is-input-inline .wc-block-components-price-slider__controls .wc-block-components-price-slider__amount {
+	max-width: unset!important;
+}
+
+.weex-color-dot {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	background-repeat: no-repeat;
+	background-position: center center; /* центр зображення по центру елемента */
+	background-size: cover; /* або contain, залежно від цілей */
+}

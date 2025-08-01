@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.mkdf-pricing-tables {
+	@include mkdfRelativeHolderLayout();
+
+	.mkdf-pt-wrapper {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	@media only screen and (min-width: $ipad-portrait-plus-pixel) and (max-width: $ipad-landscape) {
+
+		&.mkdf-grid-list {
+
+			&.mkdf-three-columns,
+			&.mkdf-four-columns,
+			&.mkdf-five-columns,
+			&.mkdf-six-columns {
+
+				.mkdf-item-space,
+				.mkdf-masonry-grid-sizer {
+					width: 50%;
+				}
+
+				.mkdf-item-space {
+					clear: none !important;
+
+					&:nth-child(2n+1) {
+						clear: both !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.mkdf-price-table {
+	
+	&.mkdf-pt-active-item {
+		
+		.mkdf-pt-inner {
+			background-color: #feeae7;
+			
+			ul li {
+				
+				&.mkdf-pt-button {
+					padding: 6px 15px 77px;
+				}
+				
+				&.mkdf-pt-content {
+					
+					ul li {
+						color: $default-heading-color;
+					}
+				}
+				
+				&.mkdf-pt-active-content {
+					position: absolute;
+					text-align: center;
+					bottom: 12px;
+					right: 10px;
+					
+					.mkdf-pt-active-text {
+						font-family: $custom-font;
+						font-size: 55px;
+						color: $default-background-color;
+					}
+				}
+			}
+		}
+	}
+	
+	.mkdf-pt-inner {
+		@include mkdfRelativeHolderLayout();
+		background-color: #fbf9f9;
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				margin: 0;
+				padding: 4px 15px;
+				text-align: center;
+				
+				&.mkdf-pt-title-holder {
+					position: relative;
+					font-family: $default-heading-font;
+					color: $default-heading-color;
+					text-transform: uppercase;
+					letter-spacing: 0.200em;
+					font-size: 12px;
+					line-height: 27px;
+					font-weight: 400;
+					
+					.mkdf-pt-title {
+						display: block;
+						box-sizing: border-box;
+						padding: 63px 0 13px;
+					}
+				}
+				
+				&.mkdf-pt-prices {
+					position: relative;
+					padding: 0 15px;
+					
+					.mkdf-pt-value {
+						position: relative;
+						font-family: $default-heading-font;
+						font-weight: 400;
+						font-size: 24px;
+						color: $default-heading-color;
+						margin: 0 -2px 0 -2px;
+					}
+					
+					.mkdf-pt-price {
+						position: relative;
+						display: inline-block;
+						font-family: $default-heading-font;
+						font-weight: 400;
+						font-size: 24px;
+						color: $default-heading-color;
+					}
+					
+					.mkdf-pt-mark {
+						position: relative;
+						display: block;
+						@include mkdfHeadingStyle(h6);
+						margin: 1px 0 0;
+					}
+				}
+				
+				&.mkdf-pt-content {
+					padding: 15px 15px;
+				}
+				
+				&.mkdf-pt-button {
+					padding: 6px 15px 68px;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */
