@@ -1,0 +1,92 @@
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Example themes
+/wp-content/themes/twenty*/
+
+# Example plugin
+/wp-content/plugins/hello.php
+/wp-content/plugins/fakerpress/
+/wp-content/plugins/post-duplicator/
+/wp-content/plugins/rewrite-rules-inspector/
+/wp-content/plugins/litespeed-cache/
+
+# Uploads
+/wp-content/uploads/
+/wp-content/webp-express/
+/wp-content/litespeed/
+/wp-content/mu-plugins/
+
+# Log files
+*.log
+
+# htaccess
+/.htaccess
+
+# ignore .docker folder
+.docker/
+
+# ignore docker files
+.dockerignore
+docker-compose.yml
+wp-config-docker.php
+
+# ignore archive and log files
+*.log
+*.logs
+*.rar
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# ignore uploads folder
+wp-content/uploads/
+
+# ignore query monitor plugin
+wp-content/plugins/query-monitor/
+wp-content/plugins/user-role-editor/
+wp-content/db.php
+
+# ignore system files
+*.bashrc
+*.bash_logout
+*.profile
+
+# node_modules
+**/node_modules
+
+old_site/
+storage/
+.idea
+*.dat
+*.ini
+*.bk
+wp-content/backups-dup-lite/installer/original_files_2446f94-24075543/source_site_wpconfig
+wp-content/backups-dup-lite/installer/original_files_2446f94-24075543/source_site_htaccess
+wp-content/backups-dup-lite/installer/original_files_2446f94-24075543/installer_host_wpconfig
+wp-content/backups-dup-lite/installer/original_files_2446f94-24075543/installer_host_htaccess
+wp-content/backups-dup-lite/installer/original_files_2446f94-24075543/entries_stored.json
+wp-content/backups-dup-lite/installer/original_files_2446f94-24075543/.htaccess
+wp-content/backups-dup-lite/installer/index.php
+wp-content/backups-dup-lite/installer/dup-installer-log__bbbf934-24075543.txt
+wp-content/backups-dup-lite/installer/dup-installer-bootlog__bbbf934-24075543.txt
+
+
+/.osp/*
