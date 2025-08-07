@@ -9,7 +9,9 @@ Text Domain: biagiotti
 Template: biagiotti
 */
 
-h4.weex-color-filter {
+/* =========================== old style ============================ */
+
+/* h4.weex-color-filter {
 	margin: 25px 0!important;
 }
 
@@ -27,31 +29,66 @@ h4.weex-color-filter {
 
 .mkdf-vertical-align-containers {
 	height: unset
-}
+} */
 
-.widget.woocommerce.widget_product_categories ul li a {
+/* =========================== old theme ============================ */
+
+/* .widget.woocommerce.widget_product_categories ul li a {
 	color: #FFFFFF;
 	background-color: unset;
 }
+.product-description h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #444;
+}
+.mkdf-woo-single-page .woocommerce-tabs .entry-content > h1 {
+	display: none;
+}
+.wpc-filters-scroll-container .wpc-filters-widget-wrapper  {
+	display: flex;
+  gap: 30px;flex-wrap: wrap;
+}
+.wpc-filters-section {
+	width: calc(33% - 17px);
+}
+.wpc-posts-found{
+	width:100%;
+}
+.wpc-widget-top-inside .wpc-inner-widget-chips-wrapper {
+	overflow-y: auto;
+} 
+	.widget.woocommerce.widget_product_categories ul li a {
+  color: #ffffff;
+  background-color: unset;
+}
 
 .weex-color-filter {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .wc-block-components-price-slider--is-input-inline .wc-block-components-price-slider__controls .wc-block-components-price-slider__amount {
-	max-width: unset!important;
+  max-width: unset !important;
 }
 
 .weex-color-dot {
-	width: 24px;
-	height: 24px;
-	border-radius: 50%;
-	display: inline-block;
-	border: 1px solid #ccc;
-	background-repeat: no-repeat;
-	background-position: center center; /* центр зображення по центру елемента */
-	background-size: cover; /* або contain, залежно від цілей */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: cover; 
+}*/
+
+/* ================================= NEW ======================== */
+
+.home .mkdf-content .mkdf-content-inner > .mkdf-container > .mkdf-container-inner,
+.home .mkdf-content .mkdf-content-inner > .mkdf-full-width > .mkdf-full-width-inner {
+  padding: 0;
 }
