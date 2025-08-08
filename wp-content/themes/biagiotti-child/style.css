@@ -92,3 +92,48 @@ Template: biagiotti
 .home .mkdf-content .mkdf-content-inner > .mkdf-full-width > .mkdf-full-width-inner {
   padding: 0;
 }
+
+div.wpc-widget-top-inside .wpc-inner-widget-chips-wrapper {
+  overflow-y: auto;
+}
+/* span.wpc-search-icon {
+  top: 20px;
+  bottom: auto;
+} */
+
+.wpc-filters-widget-content .wpc-filters-section .wpc-filter-search-form input.wpc-search-field {
+  margin-bottom: 0;
+}
+div.wpc-posts-found {
+  margin-bottom: 1.5rem;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner .mkdf-footer-bottom-column-1 .menu {
+  text-align: center;
+  margin: 0;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner .mkdf-footer-bottom-column-1 .menu > * {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 0 21px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner .mkdf-footer-bottom-column-1 .menu > * {
+    display: block;
+  }
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner .mkdf-footer-bottom-column-1 .menu > * a {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner .mkdf-footer-bottom-column-1 .menu > * a:hover {
+  color: #9f9f9f;
+}
