@@ -137,3 +137,24 @@ div.wpc-posts-found {
 .mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner .mkdf-footer-bottom-column-1 .menu > * a:hover {
   color: #9f9f9f;
 }
+
+.sort-products-widgets {
+  display: inline;
+  width: 50%;
+  float: right;
+}
+
+.select2.select2-container.select2-container--default {
+  width: auto !important;
+}
+
+body .sort-products-widgets .select2-container--default .select2-selection--single .select2-selection__arrow:before {
+  content: none;
+}
+.sort-products-widgets .wpc-sorting-form .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-right: 35px;
+}
+
+.sort-products-widgets .select2.select2-container.select2-container--default {
+  min-width: 300px !important;
+}

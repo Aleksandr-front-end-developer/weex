@@ -85,3 +85,19 @@ add_theme_support('woocommerce-block-theme');
 include_once get_template_directory() . '/theme-includes.php';
 include_once CHILD_BIAGIOTTI_MIKADO_FRAMEWORK_MODULES_ROOT_DIR . '/sidebar/load.php';
 include_once  CHILD_BIAGIOTTI_MIKADO_FRAMEWORK_MODULES_ROOT_DIR . '/woocommerce/load.php';
+
+
+// ----- add custom widget area "sort-products" to catalog products -  before sort block products
+
+add_action('woocommerce_before_shop_loop', 'replace_woocommerce_ordering_with_custom_widgets', 25);
+
+function replace_woocommerce_ordering_with_custom_widgets()
+{
+	if (is_active_sidebar('sort-products')) {
+		echo '<div class="sort-products-widgets">';
+		dynamic_sidebar('sort-products');
+		echo '</div>';
+	}
+}
+
+// ----- 
