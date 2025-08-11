@@ -26,6 +26,7 @@ wp-config.php
 /wp-content/plugins/post-duplicator/
 /wp-content/plugins/rewrite-rules-inspector/
 /wp-content/plugins/litespeed-cache/
+/wp-content/plugins/advanced-cron-manager/
 
 # Uploads
 /wp-content/uploads/
