@@ -75,7 +75,6 @@ function do_chat_gpt_translate() {
             if ( !is_wp_error( $response ) )
             {
               $body = json_decode(wp_remote_retrieve_body( $response ), true);
-              error_log(print_r($body, true));
               
               if (is_array($body) && isset($body['choices'][0]['message']['content']) && wp_remote_retrieve_response_code( $response ) == 200)
               {
@@ -181,10 +180,6 @@ function do_final_doing_after_translate() {
                       $post_terms = wp_get_object_terms( $post->ID, $taxonomy );
                       
                       $new_post_terms = array();
-                      error_log('----');
-                      error_log(print_r($taxonomy, true));
-                      error_log(print_r($post_terms, true));
-                      error_log('====');
                       foreach ($post_terms as $post_term)
                       {
                         $temp = intval(get_language_term($post_term->term_id, $row['lng_to']));

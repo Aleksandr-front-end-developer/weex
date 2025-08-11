@@ -243,8 +243,6 @@ global $wpdb;
 function clone_term_for_translate($term, $lng_to) {
 global $wpdb;
 
-                      error_log(111);
-                      error_log(print_r($term, true));
   $new_term_id = intval(get_language_term($term->term_id, $lng_to));
   
   if ($new_term_id==0 && function_exists('pll_get_term_translations') && function_exists('pll_save_term_translations')
@@ -277,12 +275,6 @@ global $wpdb;
     $GLOBALS['do_not_translate_terms'][] = array('term'=>$term->name, 'taxonomy'=>$term->taxonomy);
     
     $new_term_id = wp_insert_term( $term->name, $term->taxonomy, $args );
-                      error_log(222);
-    error_log(print_r($new_term_id, true));
-    error_log(print_r($term->name, true));
-    error_log(print_r($term->taxonomy, true));
-    error_log(print_r($args, true));
-                      error_log(333);
     $new_term_id = $new_term_id['term_id'];
     
     pll_set_term_language($new_term_id, $lng_to);
