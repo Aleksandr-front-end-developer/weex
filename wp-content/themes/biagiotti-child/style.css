@@ -162,3 +162,72 @@ p,
 nav.mkdf-drop-down .second .inner ul li a {
   font-family: Roboto, sans-serif;
 }
+.mkdf-subscribe-popup-holder-dark {
+  margin-top: 60px;
+}
+.mkdf-subscribe-popup-holder-dark .mkdf-sp-subtitle {
+  position: relative;
+  top: 2px;
+  font-family: TuesdayNight;
+  font-size: 40px;
+  color: #727272;
+}
+
+.mkdf-subscribe-popup-holder-dark .mkdf-sp-title {
+  position: relative;
+  margin: 0 0 24px;
+  color: #ffffff;
+}
+
+.wpcf7 .mkdf-subscribe-popup-holder-dark .wpcf7-form-control.wpcf7-text {
+  padding: 10px 22px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.wpcf7 .mkdf-subscribe-popup-holder-dark .wpcf7-form-control.wpcf7-text::placeholder {
+  color: #cbcbcb;
+}
+
+.mkdf-subscribe-popup-holder-dark .mkdf-two-columns-form-with-space .mkdf-column-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0 0 0;
+}
+
+.mkdf-subscribe-popup-holder-dark .mkdf-two-columns-form-with-space.mkdf-tiny-space {
+  display: flex;
+  flex-direction: column;
+}
+.mkdf-subscribe-popup-holder-dark .mkdf-btn.mkdf-btn-solid {
+  border: 1px solid #cbcbcb;
+  color: #cacaca;
+  width: 100%;
+}
+.mkdf-subscribe-popup-holder-dark .mkdf-btn.mkdf-btn-solid:not(.mkdf-btn-custom-border-hover):hover {
+  color: #ffffff !important;
+  border-color: #fff !important;
+}
+.mkdf-woocommerce-page div.mkdf-pl-controls-holder {
+  align-items: center;
+}
+.mkdf-woocommerce-page p.woocommerce-result-count {
+  line-height: 23px;
+}
+
+body .select2-container--default {
+}
+
+.wpc-see-less-control.wpc-toggle-a {
+  display: none;
+}
+
+.wpc-filters-section-12089 a.wpc-see-less-control.wpc-toggle-a {
+  display: none;
+}
+
+.wpc-filter-terms-count-0 {
+  display: none;
+}

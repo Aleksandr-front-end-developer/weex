@@ -6,7 +6,10 @@
 		dynamic_sidebar('sidearea');
 	} ?>
 
+
+
 	<?php if (is_active_sidebar('sidearea-bottom')) {
 		dynamic_sidebar('sidearea-bottom');
 	} ?>
+	<?php echo do_shortcode('[contact-form-7 id="a85f7f9" title="Subscribe Popup"]'); ?>
 </section>
