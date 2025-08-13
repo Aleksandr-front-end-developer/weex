@@ -2,39 +2,51 @@
 
 
 function qode_wishlist_for_woocommerce_get_cpt_items( $cpt_slug = 'product', $args = array(), $enable_default = true ) {
-  $options    = array();
-  $query_args = array(
-    'post_status'    => 'publish',
-    'post_type'      => $cpt_slug,
-    'posts_per_page' => '-1',
-    'fields'         => '',
-  );
+global $qode_cpt_items_cache;
+  
+  $found = (isset($qode_cpt_items_cache[$cpt_slug]) && isset($qode_cpt_items_cache[$cpt_slug]['params'])
+   && $qode_cpt_items_cache[$cpt_slug]['params']['args']==$args && $qode_cpt_items_cache[$cpt_slug]['params']['enable_default']==$enable_default);
+  
+  if (!$found)
+  {
+    $options    = array();
+    $query_args = array(
+      'post_status'    => 'publish',
+      'post_type'      => $cpt_slug,
+      'posts_per_page' => -1,
+      'fields'         => '',
+      'cache_results' => false,
+    );
 
-  if ( ! empty( $args ) ) {
-    foreach ( $args as $key => $value ) {
-      if ( ! empty( $value ) ) {
-        $query_args[ $key ] = $value;
+    if ( ! empty( $args ) ) {
+      foreach ( $args as $key => $value ) {
+        if ( ! empty( $value ) ) {
+          $query_args[ $key ] = $value;
+        }
       }
     }
-  }
+    //print_r($query_args);
+    $cpt_items = new \WP_Query( $query_args );
+    //print_r($cpt_items);
 
-  $cpt_items = new \WP_Query( $query_args );
-
-  if ( $cpt_items->have_posts() )
-  {
-
-    if ( $enable_default ) {
-      $options[''] = esc_html__( 'Default', 'qode-quick-view-for-woocommerce' );
-    }
-
-    foreach ( $cpt_items->posts as $post )
+    if ( $cpt_items->have_posts() )
     {
-      $options[ $post->ID ] = $post->post_title;
+
+      if ( $enable_default ) {
+        $options[''] = esc_html__( 'Default', 'qode-quick-view-for-woocommerce' );
+      }
+
+      foreach ( $cpt_items->posts as $post )
+      {
+        $options[ $post->ID ] = $post->post_title;
+      }
     }
-  }
 
-  wp_reset_postdata();
-
+    wp_reset_postdata();
+    $qode_cpt_items_cache[$cpt_slug] = array('data' => $options, 'params' => array('args' => $args, 'enable_default' => $enable_default));
+    
+  } else $options = $qode_cpt_items_cache[$cpt_slug]['data'];
+  
   return $options;
 }
 
@@ -43,7 +55,7 @@ function qode_quick_view_for_woocommerce_get_cpt_items( $cpt_slug = 'product', $
   return qode_wishlist_for_woocommerce_get_cpt_items( $cpt_slug, $args, $enable_default );  
 }
 
-function qi_addons_for_elementor_get_cpt_items( $cpt_slug = 'product', $args = array(), $enable_default = true ) {
+function qi_addons_for_elementor_get_cpt_items( $cpt_slug, $args = array(), $enable_default = false ) {
 
   return qode_wishlist_for_woocommerce_get_cpt_items( $cpt_slug, $args, $enable_default );  
 }
@@ -55,11 +67,14 @@ function qode_wishlist_for_woocommerce_get_pages( $enable_default = false ) {
   $query_args = array(
     'post_status'    => 'publish',
     'post_type'      => 'page',
-    'posts_per_page' => '-1',
+    'posts_per_page' => -1,
     'fields'         => '',
+    'cache_results' => false,
   );
 
+  //print_r($query_args);
   $cpt_items = new \WP_Query( $query_args );
+  //print_r($cpt_items->request);
 
   if ( $cpt_items->have_posts() )
   {
@@ -193,4 +208,39 @@ global $biagiotti_logos;
   }
   
   biagiotti_mikado_get_module_template_part( 'parts/logo', 'header', $slug, $params );
+}
+
+
+function biagiotti_mikado_get_attachment_id_from_url( $attachment_url ) {
+global $wpdb, $biagiotti_url_ids;
+
+  $attachment_id = '';
+
+  if (!isset($biagiotti_url_ids[$attachment_url]))
+  {
+    
+    //is attachment url set?
+    if ( $attachment_url !== '' ) {
+      //prepare query
+      
+      $query = $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE guid=%s", $attachment_url );
+      
+      //get attachment id
+      $attachment_id = $wpdb->get_var( $query );
+
+      // Additional check for undefined reason when guid is not image src
+      if ( empty( $attachment_id ) ) {
+          $modified_url = substr( $attachment_url, strrpos( $attachment_url, '/' ) + 1 );
+          $query = $wpdb->prepare( "SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key='_wp_attached_file' AND meta_value LIKE %s", '%' . $modified_url . '%' );
+
+          //get attachment id
+          $attachment_id = $wpdb->get_var( $query );
+      }
+      
+      $biagiotti_url_ids[$attachment_url] = $attachment_id;
+    }
+  } else $attachment_id = $biagiotti_url_ids[$attachment_url];
+  
+  //return id
+  return $attachment_id;
 }
