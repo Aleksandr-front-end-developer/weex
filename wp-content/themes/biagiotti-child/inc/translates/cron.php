@@ -24,7 +24,7 @@ add_action( 'chat_gpt_translate', 'do_chat_gpt_translate' );
 
 if( ! wp_next_scheduled( 'chat_gpt_translate' ) )
 {
-  wp_schedule_event( time(), 'one_min', 'chat_gpt_translate');
+  wp_schedule_event( time(), 'five_min', 'chat_gpt_translate');
 }
 
 function do_chat_gpt_translate() {
@@ -69,8 +69,10 @@ function do_chat_gpt_translate() {
                 "Content-Type" => "application/json",
                 "Authorization" => "Bearer ".$key,
               ),
-              'timeout' => 60,
+              'timeout' => 120,
             ));
+            //error_log("Запрос wp_remote_post id: ".$row['id']);
+            //error_log("Запрос wp_remote_post: ".print_r($data, true));
 
             if ( !is_wp_error( $response ) )
             {
@@ -83,16 +85,23 @@ function do_chat_gpt_translate() {
                 if (isset($temp[1]))
                 {
                   $temp = explode('```', $temp[1]);
-                  $content_temp = $temp[0];  
+                  $content_temp = mb_trim($temp[0]);  
                 }
 
                 $wpdb->update( TRANSLATE_FRAGMENTS_TABLE, array( 'translate' => $content_temp, 'translated' => 1 ), array( 'id' => $row['id'] ) );
+              } else
+              {
+                //error_log("Ошибка wp_remote_post: ".wp_remote_retrieve_response_code( $response ));
+                //error_log("Ошибка wp_remote_post body: ".print_r($body, true));
               }
               
               if (is_array($body) && isset($body['error']) && isset($body['error']['message']))
               {
                 $updated = update_option( 'last_translate_error', wp_date('d.m.Y H:i') . ' - ' . $body['error']['message'], true );
               }
+            } else
+            {
+              //error_log("Ошибка wp_remote_post: $error_message");
             }
           }
         } else

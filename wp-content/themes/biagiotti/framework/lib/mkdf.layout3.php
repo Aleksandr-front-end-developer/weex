@@ -112,7 +112,7 @@ class BiagiottiMikadoClassTwitterFramework implements iBiagiottiMikadoInterfaceR
 
 class BiagiottiMikadoClassInstagramFramework implements iBiagiottiMikadoInterfaceRender {
     public function render( $factory ) {
-        $instagram_api = BiagiottiInstagramApi::getInstance();
+        $instagram_api = BiagiottiInstagramApi::get_instance();
         $message       = '';
 		
 	    //check if code parameter and instagram parameter is set in URL

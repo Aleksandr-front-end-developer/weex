@@ -8,7 +8,7 @@
 
 get_header();
 
-$count = 10;
+$count = -1;
 
 $my_posts = get_posts( array(
 	'numberposts' => $count,
@@ -29,6 +29,7 @@ $my_posts = get_posts( array(
 foreach( $my_posts as $post )
 {
   do_action('wp_after_insert_post', $post->ID, $post, true);
+  usleep(20);
 }
 
 get_footer();
