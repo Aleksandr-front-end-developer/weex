@@ -162,9 +162,16 @@ p,
 nav.mkdf-drop-down .second .inner ul li a {
   font-family: Roboto, sans-serif;
 }
-.mkdf-subscribe-popup-holder-dark {
-  margin-top: 60px;
+
+/* ---------subscribe footer------------ */
+
+@media only screen and (min-width: 769px) {
+  .mkdf-footer-top-alignment-left .mkdf-column-content.mkdf-grid-col-4:last-child {
+    max-width: 280px;
+    float: right;
+  }
 }
+
 .mkdf-subscribe-popup-holder-dark .mkdf-sp-subtitle {
   position: relative;
   top: 2px;
@@ -172,15 +179,22 @@ nav.mkdf-drop-down .second .inner ul li a {
   font-size: 40px;
   color: #727272;
 }
-
+.mkdf-footer-column-3 p {
+  margin: 0;
+}
 .mkdf-subscribe-popup-holder-dark .mkdf-sp-title {
   position: relative;
-  margin: 0 0 24px;
+  margin: 0 0 12px;
   color: #ffffff;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  line-height: 1.353em;
+  letter-spacing: 0.035em;
+  font-weight: 400;
 }
 
 .wpcf7 .mkdf-subscribe-popup-holder-dark .wpcf7-form-control.wpcf7-text {
-  padding: 10px 22px;
+  padding: 3px 15px;
   font-size: 18px;
   color: #ffffff;
 }
@@ -194,7 +208,7 @@ nav.mkdf-drop-down .second .inner ul li a {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 15px 0 0 0;
+  padding: 10px 0 0 0;
 }
 
 .mkdf-subscribe-popup-holder-dark .mkdf-two-columns-form-with-space.mkdf-tiny-space {
@@ -204,6 +218,11 @@ nav.mkdf-drop-down .second .inner ul li a {
 .mkdf-subscribe-popup-holder-dark .mkdf-btn.mkdf-btn-solid {
   border: 1px solid #cbcbcb;
   color: #cacaca;
+  width: 100%;
+  padding: 6px 15px;
+}
+.mkdf-two-columns-form-with-space.mkdf-tiny-space .mkdf-column-left {
+  padding: 0;
   width: 100%;
 }
 .mkdf-subscribe-popup-holder-dark .mkdf-btn.mkdf-btn-solid:not(.mkdf-btn-custom-border-hover):hover {
@@ -228,6 +247,12 @@ body .select2-container--default {
   display: none;
 }
 
-.wpc-filter-terms-count-0 {
+.wpc-filter-terms-count-0,
+a.mkdf-side-menu-button-opener {
   display: none;
+}
+/* -------------cart sidebar */
+
+div.mkdf-shopping-cart-holder div.mkdf-sc-dropdown {
+  max-height: 100vh;
 }

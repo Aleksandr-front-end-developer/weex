@@ -1,3 +1,4 @@
+ <?php /* 	
 <section class="mkdf-side-menu">
 	<a <?php biagiotti_mikado_class_attribute($close_icon_classes); ?> href="#">
 		<?php echo biagiotti_mikado_get_icon_sources_html('side_area', true); ?>
@@ -13,3 +14,5 @@
 	} ?>
 	<?php echo do_shortcode('[contact-form-7 id="a85f7f9" title="Subscribe Popup"]'); ?>
 </section>
+
+ */ ?> 
