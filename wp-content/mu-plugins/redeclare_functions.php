@@ -244,3 +244,53 @@ global $wpdb, $biagiotti_url_ids;
   //return id
   return $attachment_id;
 }
+
+
+function qode_wishlist_for_woocommerce_get_wishlist_items( $check_token_items = false ) {
+  $wishlist_items       = array();
+  $cache_wishlist_items = qode_wishlist_for_woocommerce_get_cookie( QODE_WISHLIST_FOR_WOOCOMMERCE_GUESTS_ITEMS );
+  $has_token            = qode_wishlist_for_woocommerce_get_http_request_args();
+
+  if ( $check_token_items && $has_token ) {
+    $token_items = qode_wishlist_for_woocommerce_get_wishlist_items_by_token( $has_token );
+
+    if ( ! empty( $token_items ) ) {
+      $wishlist_items = $token_items;
+    }
+  } elseif ( is_user_logged_in() ) {
+    $user_id             = get_current_user_id();
+    $user_wishlist_items = get_user_meta( $user_id, 'qode_wishlist_for_woocommerce_user_wishlist_items', true );
+
+    if ( ! empty( $user_wishlist_items ) ) {
+      $wishlist_items = apply_filters( 'qode_wishlist_for_woocommerce_filter_user_wishlist_items', $user_wishlist_items, $user_id );
+    }
+  } elseif ( ! empty( $cache_wishlist_items ) ) {
+    $wishlist_items = $cache_wishlist_items;
+  }
+  
+  $lng = get_current_language();
+  if (isset($wishlist_items['default']))
+  {
+    foreach ($wishlist_items['default'] as $key=>$value)
+    {
+      if (is_array($value) && intval($key)!=0)
+      {
+        $temp = $value;
+        $temp_key = intval($key);
+        $post_id = get_language_post( intval($key), $lng );
+        $post = get_post($post_id, ARRAY_A);
+        if (isset($post['ID']))
+        {
+          $temp['product_id'] = $post['ID'];
+          $temp_key = $post['ID'];
+        }
+        if (isset($post['post_title'])) $temp['product_title'] = $post['post_title'];
+       
+        unset($wishlist_items['default'][$key]);
+        $wishlist_items['default'][$temp_key] = $temp;
+      }
+    }
+  }
+  
+  return $wishlist_items;
+}

@@ -194,7 +194,7 @@ function get_current_language( $value = 'slug' ) {
 		return pll_current_language( $value );
 	}
 
-	return 'ru';
+	return 'uk';
 }
 
 function get_language_post( $post_id, $slug = '' ) {

@@ -110,3 +110,28 @@ require_once __DIR__ . '/inc/init-core.php';
 add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 // Disables the block editor from managing widgets.
 add_filter( 'use_widgets_block_editor', '__return_false' );
+
+
+if ( ! function_exists( 'get_current_language' ) ) {
+
+  function get_current_language( $value = 'slug' ) {
+
+    if ( function_exists( 'pll_current_language' ) ) {
+      return pll_current_language( $value );
+    }
+
+    return 'uk';
+  }
+}
+
+if ( ! function_exists( 'get_language_post' ) ) {
+
+  function get_language_post( $post_id, $slug = '' ) {
+
+    if ( function_exists( 'pll_get_post' ) ) {
+      return pll_get_post( $post_id, $slug );
+    }
+
+    return $post_id;
+  }
+}
