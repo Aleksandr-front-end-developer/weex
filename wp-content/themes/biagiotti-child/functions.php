@@ -135,3 +135,19 @@ if ( ! function_exists( 'get_language_post' ) ) {
     return $post_id;
   }
 }
+
+if ( ! function_exists( 'pll_default_language' ) ) {
+
+  function get_default_language() {
+
+    if ( function_exists( 'pll_default_language' ) ) {
+      return pll_default_language();
+    }
+
+    return 'uk';
+  }
+}
+
+$lng = get_current_language();
+$slug = ($lng==get_default_language()) ? '' : $lng.'/';
+define('SEARCH_SLUG', $slug);

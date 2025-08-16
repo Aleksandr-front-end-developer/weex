@@ -185,7 +185,7 @@ function get_default_language() {
 		return pll_default_language();
 	}
 
-	return 'ru';
+	return 'uk';
 }
 
 function get_current_language( $value = 'slug' ) {
