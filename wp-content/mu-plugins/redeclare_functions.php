@@ -115,7 +115,7 @@ function biagiotti_membership_get_dashboard_page_url() {
 }
 
 
-function biagiotti_mikado_save_options() {
+/*function biagiotti_mikado_save_options() {
   global $biagiotti_mikado_global_options;
 
   if ( current_user_can( 'edit_theme_options' ) ) {
@@ -134,7 +134,7 @@ function biagiotti_mikado_save_options() {
 
     die();
   }
-}
+}*/
 
 function biagiotti_mikado_is_customizer_item_enabled( $item, $option_name, $is_item_id_class = false ) {
   $item_slug       = $is_item_id_class ? $item : basename( dirname( $item ) );
