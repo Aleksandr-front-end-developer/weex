@@ -136,7 +136,7 @@ if ( ! function_exists( 'get_language_post' ) ) {
   }
 }
 
-if ( ! function_exists( 'pll_default_language' ) ) {
+if ( ! function_exists( 'get_default_language' ) ) {
 
   function get_default_language() {
 
@@ -151,3 +151,15 @@ if ( ! function_exists( 'pll_default_language' ) ) {
 $lng = get_current_language();
 $slug = ($lng==get_default_language()) ? '' : $lng.'/';
 define('SEARCH_SLUG', $slug);
+
+
+add_filter( 'wpc_filters_checkbox_term_html', 'wpc_filters_checkbox_term_html_color_filter', 10, 4 );
+function wpc_filters_checkbox_term_html_color_filter( $html, $attributes, $term, $filter ){
+
+  //error_log(print_r($html, true));
+  //error_log(print_r($attributes, true));
+  //error_log(print_r($term, true));
+  //error_log(print_r($filter, true));
+  
+  return $html;
+}
