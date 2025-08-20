@@ -156,10 +156,32 @@ define('SEARCH_SLUG', $slug);
 add_filter( 'wpc_filters_checkbox_term_html', 'wpc_filters_checkbox_term_html_color_filter', 10, 4 );
 function wpc_filters_checkbox_term_html_color_filter( $html, $attributes, $term, $filter ){
 
-  //error_log(print_r($html, true));
-  //error_log(print_r($attributes, true));
-  //error_log(print_r($term, true));
-  //error_log(print_r($filter, true));
+  if (isset($filter['e_name']) && $filter['e_name']=='pa_kolir')
+  {
+    $termmeta = get_term_meta( $term->term_id );
+    $color = (isset($termmeta['color_hex']) && isset($termmeta['color_hex'][0]) && $termmeta['color_hex'][0]!='');
+    $image = (isset($termmeta['color_image']) && isset($termmeta['color_image'][0]) && $termmeta['color_image'][0]!='');
+    
+    $temp = '<div class="custom-filter-color" title="'.$term->name.'"><a '.$attributes.'>';
+    if ($color)
+    {
+      $temp .= '<div class="custom-filter-color__block" style="background-color:'.$termmeta['color_hex'][0].'"></div><span>'.$term->name.'</span>';  
+    
+    } elseif ($image)
+    {
+      $image_url = wp_get_attachment_image_url( intval($termmeta['color_image'][0]), 'thumbnail' );
+      $temp .= '<div class="custom-filter-color__block"><img width="20" height="20" class="custom-filter-color__img" src="'.$image_url.'" alt="'.$term->name.'"></div><span>'.$term->name.'</span>';  
+
+    } else
+    {
+      $temp .= '<span>'.$term->name.'</span>';
+    }
+    $temp .= '</a></div>';
+    
+    $html = $temp;
+  }
   
   return $html;
 }
+
+define('POLYLANG_PRO', true);
