@@ -107,81 +107,85 @@ function replace_woocommerce_ordering_with_custom_widgets()
 require_once __DIR__ . '/inc/init-core.php';
 
 // Disables the block editor from managing widgets in the Gutenberg plugin.
-add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+add_filter('gutenberg_use_widgets_block_editor', '__return_false');
 // Disables the block editor from managing widgets.
-add_filter( 'use_widgets_block_editor', '__return_false' );
+add_filter('use_widgets_block_editor', '__return_false');
 
 
-if ( ! function_exists( 'get_current_language' ) ) {
+if (! function_exists('get_current_language')) {
 
-  function get_current_language( $value = 'slug' ) {
+	function get_current_language($value = 'slug')
+	{
 
-    if ( function_exists( 'pll_current_language' ) ) {
-      return pll_current_language( $value );
-    }
+		if (function_exists('pll_current_language')) {
+			return pll_current_language($value);
+		}
 
-    return 'uk';
-  }
+		return 'uk';
+	}
 }
 
-if ( ! function_exists( 'get_language_post' ) ) {
+if (! function_exists('get_language_post')) {
 
-  function get_language_post( $post_id, $slug = '' ) {
+	function get_language_post($post_id, $slug = '')
+	{
 
-    if ( function_exists( 'pll_get_post' ) ) {
-      return pll_get_post( $post_id, $slug );
-    }
+		if (function_exists('pll_get_post')) {
+			return pll_get_post($post_id, $slug);
+		}
 
-    return $post_id;
-  }
+		return $post_id;
+	}
 }
 
-if ( ! function_exists( 'get_default_language' ) ) {
+if (! function_exists('get_default_language')) {
 
-  function get_default_language() {
+	function get_default_language()
+	{
 
-    if ( function_exists( 'pll_default_language' ) ) {
-      return pll_default_language();
-    }
+		if (function_exists('pll_default_language')) {
+			return pll_default_language();
+		}
 
-    return 'uk';
-  }
+		return 'uk';
+	}
 }
 
 $lng = get_current_language();
-$slug = ($lng==get_default_language()) ? '' : $lng.'/';
+$slug = ($lng == get_default_language()) ? '' : $lng . '/';
 define('SEARCH_SLUG', $slug);
 
 
-add_filter( 'wpc_filters_checkbox_term_html', 'wpc_filters_checkbox_term_html_color_filter', 10, 4 );
-function wpc_filters_checkbox_term_html_color_filter( $html, $attributes, $term, $filter ){
+add_filter('wpc_filters_checkbox_term_html', 'wpc_filters_checkbox_term_html_color_filter', 10, 4);
+function wpc_filters_checkbox_term_html_color_filter($html, $attributes, $term, $filter)
+{
 
-  if (isset($filter['e_name']) && $filter['e_name']=='pa_kolir')
-  {
-    $termmeta = get_term_meta( $term->term_id );
-    $color = (isset($termmeta['color_hex']) && isset($termmeta['color_hex'][0]) && $termmeta['color_hex'][0]!='');
-    $image = (isset($termmeta['color_image']) && isset($termmeta['color_image'][0]) && $termmeta['color_image'][0]!='');
-    
-    $temp = '<div class="custom-filter-color" title="'.$term->name.'"><a '.$attributes.'>';
-    if ($color)
-    {
-      $temp .= '<div class="custom-filter-color__block" style="background-color:'.$termmeta['color_hex'][0].'"></div><span>'.$term->name.'</span>';  
-    
-    } elseif ($image)
-    {
-      $image_url = wp_get_attachment_image_url( intval($termmeta['color_image'][0]), 'thumbnail' );
-      $temp .= '<div class="custom-filter-color__block"><img width="20" height="20" class="custom-filter-color__img" src="'.$image_url.'" alt="'.$term->name.'"></div><span>'.$term->name.'</span>';  
+	if (isset($filter['e_name']) && $filter['e_name'] == 'pa_kolir') {
+		$termmeta = get_term_meta($term->term_id);
+		$color = (isset($termmeta['color_hex']) && isset($termmeta['color_hex'][0]) && $termmeta['color_hex'][0] != '');
+		$image = (isset($termmeta['color_image']) && isset($termmeta['color_image'][0]) && $termmeta['color_image'][0] != '');
 
-    } else
-    {
-      $temp .= '<span>'.$term->name.'</span>';
-    }
-    $temp .= '</a></div>';
-    
-    $html = $temp;
-  }
-  
-  return $html;
+		$temp = '<div class="custom-filter-color" title="' . $term->name . '"><a ' . $attributes . '>';
+		if ($color) {
+			$temp .= '<div class="custom-filter-color__block" style="background-color:' . $termmeta['color_hex'][0] . '"></div><span>' . $term->name . '</span>';
+		} elseif ($image) {
+			$image_url = wp_get_attachment_image_url(intval($termmeta['color_image'][0]), 'thumbnail');
+			$temp .= '<div class="custom-filter-color__block"><img width="20" height="20" class="custom-filter-color__img" src="' . $image_url . '" alt="' . $term->name . '"></div><span>' . $term->name . '</span>';
+		} else {
+			$temp .= '<span>' . $term->name . '</span>';
+		}
+		$temp .= '</a></div>';
+
+		$html = $temp;
+	}
+
+	return $html;
 }
 
 define('POLYLANG_PRO', true);
+
+function child_theme_deregister_prettyphoto()
+{
+	wp_deregister_script('prettyphoto');
+}
+add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
