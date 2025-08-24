@@ -709,7 +709,12 @@ div.mkdf-banner-holder.mkdf-banner-info-right .mkdf-banner-text-holder .mkdf-ban
     padding-left: 16px;
   }
 }
-
+@media only screen and (min-width: 1025px) and (max-width: 1340px) {
+  .mkdf-banner-holder h3.mkdf-banner-title {
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+}
 .mkdf-banner-holder.mkdf-banner-info-right.sub-banner-1 .mkdf-banner-text-holder .mkdf-banner-text-inner {
   justify-content: flex-start;
   align-items: flex-start;
@@ -807,8 +812,15 @@ div.mkdf-banner-holder.mkdf-banner-info-right .mkdf-banner-text-holder .mkdf-ban
     background-size: cover;
     background-position: center center !important;
   }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
   .mkdf-title-holder.mkdf-standard-type h1.mkdf-page-title {
     font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1299px) {
+  .mkdf-title-holder.mkdf-standard-type h1.mkdf-page-title {
+    font-size: 50px;
   }
 }
 @media only screen and (min-width: 681px) and (max-width: 1126px) {
