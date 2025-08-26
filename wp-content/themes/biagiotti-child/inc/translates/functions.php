@@ -108,20 +108,32 @@ function save_translate_string($text_array, $lng_from, $lng_to, $fragment_ids) {
 function save_translate_post_or_term_row($lng_from, $lng_to, $post_id, $type, $strings) {
   global $wpdb;
   
-  $strings = json_encode($strings, JSON_NUMERIC_CHECK);
-
-  $sql = $wpdb->prepare( "SELECT id FROM ".TRANSLATE_POSTS_TERMS_TABLE." WHERE lng_from = '%s' AND lng_to = '%s' AND post_term_id = '%d' AND post_or_term = '%s'", $lng_from, $lng_to, $post_id, $type );
-  $id = $wpdb->get_var($sql);
-  
-  if (is_null($id))
+  $id = null;
+  $translate = true;
+  if ($type=='post')
   {
-    $wpdb->insert( TRANSLATE_POSTS_TERMS_TABLE, array( 'lng_from' => $lng_from, 'lng_to' => $lng_to, 'post_term_id' => $post_id, 'post_or_term' => $type, 'translate_strings' => $strings ) );
-    $id = $wpdb->insert_id;
-  } else
-  {
-    $wpdb->update( TRANSLATE_POSTS_TERMS_TABLE, array( 'translate_strings' => $strings ), array( 'id' => $id ) );
+    $dest_post_id = get_language_post($post_id, $lng_to);
+    $post_auto_translate = carbon_get_post_meta($dest_post_id, 'post_auto_translate');
+    if ($post_auto_translate!='1') $translate = false;
   }
+  
+  if ($translate)
+  {
+    $strings = json_encode($strings, JSON_NUMERIC_CHECK);
 
+    $sql = $wpdb->prepare( "SELECT id FROM ".TRANSLATE_POSTS_TERMS_TABLE." WHERE lng_from = '%s' AND lng_to = '%s' AND post_term_id = '%d' AND post_or_term = '%s'", $lng_from, $lng_to, $post_id, $type );
+    $id = $wpdb->get_var($sql);
+    
+    if (is_null($id))
+    {
+      $wpdb->insert( TRANSLATE_POSTS_TERMS_TABLE, array( 'lng_from' => $lng_from, 'lng_to' => $lng_to, 'post_term_id' => $post_id, 'post_or_term' => $type, 'translate_strings' => $strings ) );
+      $id = $wpdb->insert_id;
+    } else
+    {
+      $wpdb->update( TRANSLATE_POSTS_TERMS_TABLE, array( 'translate_strings' => $strings ), array( 'id' => $id ) );
+    }
+  }
+  
   return $id;
 }
 

@@ -274,6 +274,11 @@ function do_final_doing_after_translate() {
       if ($need_delete===true)
       {
         $wpdb->delete( TRANSLATE_POSTS_TERMS_TABLE, array( 'id' => $row['id'] ), array( '%d' ) );
+        if ($row['post_or_term']=='post')
+        {
+          $dest_post_id = get_language_post($row['post_term_id'], $row['lng_to']);
+          carbon_set_post_meta( $dest_post_id, 'post_auto_translate', '0' );  
+        }
       }
     }
   }

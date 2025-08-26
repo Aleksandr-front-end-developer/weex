@@ -11,7 +11,7 @@ function vancouver_translate_for_insert_post($post_id, $post, $update) {
     $default_lng = get_default_language();
     $post_auto_translate = carbon_get_post_meta($post_id, 'post_auto_translate');
     
-    if (isset($translate_lists['posts'][$post->post_type]) && is_array($translate_lists['posts'][$post->post_type]) && $post_lng==$default_lng /*&& $post_auto_translate=='1'*/)
+    if (isset($translate_lists['posts'][$post->post_type]) && is_array($translate_lists['posts'][$post->post_type]) && $post_lng==$default_lng && $post_auto_translate=='1')
     {
       $translate_list = $translate_lists['posts'][$post->post_type];
       
