@@ -34,9 +34,9 @@ global $wpdb;
   {
     $data = $item->data;
   
-    if (isset($data['billing']['phone']) && $data['billing']['phone']!='' && $data['currency']=='UAH')
+    if (isset($data['billing']['email']) && $data['billing']['email']!='' && $data['currency']=='UAH')
     {
-      $phone = $data['billing']['phone'];
+      $phone = $data['billing']['email'];
       if (!isset($phones[$phone])) $phones[$phone] = array('total'=>0, 'total_last_year'=>0, 'min_order_time'=>$current_time);
       
       $time = (isset($data['date_completed']) && !is_null($data['date_completed'])) ? $data['date_completed']->getTimestamp() : $current_time;
@@ -53,7 +53,7 @@ global $wpdb;
 			<h1><?php esc_html_e('Статистика заказов', 'biagiotti-child'); ?></h1>
       <table>
       <tr>
-        <th><?php esc_html_e('Телефон', 'biagiotti-child'); ?></th>
+        <th><?php esc_html_e('Email', 'biagiotti-child'); ?></th>
         <th><?php esc_html_e('Всего куплено', 'biagiotti-child'); ?></th>
         <th><?php esc_html_e('Куплено за последний год', 'biagiotti-child'); ?></th>
         <th><?php esc_html_e('Среднегодовые покупки', 'biagiotti-child'); ?></th>
