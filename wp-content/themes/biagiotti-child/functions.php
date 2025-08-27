@@ -189,3 +189,6 @@ function child_theme_deregister_prettyphoto()
 	wp_deregister_script('prettyphoto');
 }
 add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
+
+//Статистика заказов
+require_once __DIR__ . '/modules/shop_statistics.php';
