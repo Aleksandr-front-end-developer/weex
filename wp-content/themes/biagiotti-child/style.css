@@ -894,4 +894,40 @@ div.nswiper-slide img,
 div.nswiper-slide video,
 div.nswiper-slide iframe {
   aspect-ratio: 518 / 640;
+  max-width: 600px;
+  margin-left: auto;
+}
+#mkdf-back-to-top > span.mkdf-icon-stack {
+  font-size: 0;
+  position: relative;
+}
+#mkdf-back-to-top > span.mkdf-icon-stack:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #5f5f5f;
+  border-left: 2px solid #5f5f5f;
+  top: 20px;
+  left: 14px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+#mkdf-back-to-top:hover > span.mkdf-icon-stack:before {
+  border-color: #838383;
+}
+
+ul.products > .product .mkdf-pl-inner .mkdf-pl-image img {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mkdf-subscribe-popup-holder .mkdf-sp-prevent {
+  display: none;
+}
+.mkdf-subscribe-popup-holder .mkdf-sp-title {
+  font-size: 20px;
+  margin-bottom: 10px;
 }

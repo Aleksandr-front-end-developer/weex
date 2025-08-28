@@ -184,8 +184,16 @@ function wpc_filters_checkbox_term_html_color_filter($html, $attributes, $term, 
 
 define('POLYLANG_PRO', true);
 
-function child_theme_deregister_prettyphoto()
+// function child_theme_deregister_prettyphoto()
+// {
+// 	wp_deregister_script('prettyphoto');
+// }
+// add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
+
+add_filter('woocommerce_checkout_fields', 'make_phone_field_required');
+
+function make_phone_field_required($fields)
 {
-	wp_deregister_script('prettyphoto');
+	$fields['billing']['billing_phone']['required'] = true;
+	return $fields;
 }
-add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
