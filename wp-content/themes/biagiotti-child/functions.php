@@ -184,11 +184,18 @@ function wpc_filters_checkbox_term_html_color_filter($html, $attributes, $term, 
 
 define('POLYLANG_PRO', true);
 
-function child_theme_deregister_prettyphoto()
-{
-	wp_deregister_script('prettyphoto');
-}
-add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
+// function child_theme_deregister_prettyphoto()
+// {
+// 	wp_deregister_script('prettyphoto');
+// }
+// add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
 
+add_filter('woocommerce_checkout_fields', 'make_phone_field_required');
+
+function make_phone_field_required($fields)
+{
+	$fields['billing']['billing_phone']['required'] = true;
+	return $fields;
+}
 //Статистика заказов
 require_once __DIR__ . '/modules/shop_statistics.php';

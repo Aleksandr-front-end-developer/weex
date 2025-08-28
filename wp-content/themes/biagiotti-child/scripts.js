@@ -72,4 +72,14 @@
       switchLangPoly = false;
     }
   });
+
+  $(".mkdf-sp-close").on("click", function (e) {
+    localStorage.setItem("disabledPopup", "yes");
+  });
+  $(document).keyup(function (e) {
+    if (e.keyCode === 27) {
+      //KeyCode for ESC button is 27
+      localStorage.setItem("disabledPopup", "yes");
+    }
+  });
 })(jQuery);
