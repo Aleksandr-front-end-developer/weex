@@ -1,14 +1,6 @@
 (function ($) {
   ("use strict");
 
-  // $(document).ajaxComplete(function (event, xhr, settings) {
-  //   if (settings.data.includes("filter")) {
-  //     mkdfInitSelect2();
-  //   }
-  // });
-
-  // $(".mkdf-pl-controls-holder").prepend($(".widget widget_wpc_sorting_widget").detach());
-
   $(".mkdf-shopping-cart-holder").on("click", function (e) {
     e.stopPropagation();
     $(".mkdf-sc-dropdown").css("right", "0");
@@ -40,9 +32,6 @@
     }
   });
 
-  // $(".mkdf-sc-dropdown").on("click", function (e) {
-  //   e.stopPropagation();
-  // });
   $(".mkdf-shopping-cart-holder .mkdf-header-cart").on("click", function (e) {
     e.preventDefault();
   });
@@ -82,4 +71,62 @@
       localStorage.setItem("disabledPopup", "yes");
     }
   });
+
+  //  ! ******Кастомная смена текстов и линков для кнопки добавить в избранное *********
+  function getBrowseWishlistText() {
+    var htmlLang = document.documentElement.getAttribute("lang");
+
+    if (htmlLang === "uk") {
+      return "Переглянути список бажань";
+    } else if (htmlLang === "ru-RU") {
+      return "Просмотреть список желаний";
+    } else {
+      return "Browse wishlist";
+    }
+  }
+  function getBrowseWishlistLink() {
+    var htmlLang = document.documentElement.getAttribute("lang");
+
+    if (htmlLang === "uk") {
+      return "/wishlist";
+    } else if (htmlLang === "ru-RU") {
+      return "/ru/wishlist-ru";
+    } else {
+      return "/en/wishlist-en";
+    }
+  }
+
+  function changeWishlistText() {
+    var browseText = getBrowseWishlistText();
+    var browseLink = getBrowseWishlistLink();
+
+    var wishlistButtons = document.querySelectorAll(".qwfw-add-to-wishlist");
+
+    wishlistButtons.forEach(function (button) {
+      if (button.classList.contains("qwfw--added") || button.classList.contains("added") || button.getAttribute("data-added") === "true") {
+        var textElement = button.querySelector(".qwfw-m-text");
+
+        if (textElement) {
+          textElement.textContent = browseText;
+
+          if (textElement.hasAttribute("data-label")) {
+            textElement.setAttribute("data-label", browseText);
+          }
+        }
+        $(button).attr("href", browseLink);
+      }
+    });
+  }
+
+  function handleWishlistAction() {
+    setTimeout(changeWishlistText, 100);
+  }
+
+  $(document).ajaxComplete(function (event, xhr, settings) {
+    if (settings.url && (settings.url.includes("wishlist") || (settings.data && settings.data.includes("wishlist")))) {
+      handleWishlistAction();
+    }
+  });
+
+  // ***********
 })(jQuery);
