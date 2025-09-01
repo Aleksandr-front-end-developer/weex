@@ -10,6 +10,7 @@
 		<div class="mkdf-title-inner">
 			<div class="mkdf-grid">
 				<?php if(!empty($title)) { ?>
+				  <?php if(is_product()) $title_tag = 'div'; ?>
 					<<?php echo esc_attr($title_tag); ?> class="mkdf-page-title entry-title" <?php biagiotti_mikado_inline_style($title_styles); ?>><?php echo esc_html($title); ?></<?php echo esc_attr($title_tag); ?>>
 				<?php } ?>
 				<?php if(!empty($subtitle)){ ?>
