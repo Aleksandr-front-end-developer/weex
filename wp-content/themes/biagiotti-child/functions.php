@@ -190,12 +190,26 @@ define('POLYLANG_PRO', true);
 // }
 // add_action('wp_enqueue_scripts', 'child_theme_deregister_prettyphoto', 20);
 
-add_filter('woocommerce_checkout_fields', 'make_phone_field_required');
+add_filter('woocommerce_checkout_fields', 'make_phone_field_required', 9999);
 
 function make_phone_field_required($fields)
 {
 	$fields['billing']['billing_phone']['required'] = true;
+  
 	return $fields;
+}
+
+add_filter('woocommerce_default_address_fields', 'modify_default_address_fields', 9999);
+
+function modify_default_address_fields($fields) {
+    $fields['country']['required'] = false;
+    $fields['address_1']['required'] = false;
+    $fields['address_2']['required'] = false;
+    $fields['city']['required'] = false;
+    $fields['state']['required'] = false;
+    $fields['postcode']['required'] = false;
+    
+    return $fields;
 }
 //Статистика заказов
 require_once __DIR__ . '/modules/shop_statistics.php';
